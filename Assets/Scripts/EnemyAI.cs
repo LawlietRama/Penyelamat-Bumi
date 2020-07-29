@@ -7,6 +7,9 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField] Transform target;
     [SerializeField] float chaseRange = 5f;
+
+    public Transform[] patrolPoints;
+    public int currentPatrolPoint;
     
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
@@ -28,14 +31,31 @@ public class EnemyAI : MonoBehaviour
         {
             EngageTarget();
         }
+        else
+        {
+            navMeshAgent.SetDestination(patrolPoints[currentPatrolPoint].position);
+
+            if(navMeshAgent.remainingDistance <= .2f)
+            {
+                currentPatrolPoint++;
+                if (currentPatrolPoint >=  patrolPoints.Length)
+                {
+                    currentPatrolPoint = 0;
+                }
+
+                navMeshAgent.SetDestination(patrolPoints[currentPatrolPoint].position);
+            }
+        }
+
+
         if (distanceToTarget <= chaseRange)
         {
             isProvoked = true;
         }
-        /*else if (distanceToTarget >= chaseRange)
+        else if (distanceToTarget >= chaseRange)
         {
             isProvoked = false;
-        }*/
+        }
     }
 
     private void EngageTarget()
