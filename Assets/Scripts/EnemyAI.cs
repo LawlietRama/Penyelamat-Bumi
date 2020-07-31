@@ -7,6 +7,7 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField] Transform target;
     [SerializeField] float chaseRange = 5f;
+    [SerializeField] float attackRange = 1f;
 
     public Transform[] patrolPoints;
     public int currentPatrolPoint;
@@ -17,44 +18,108 @@ public class EnemyAI : MonoBehaviour
 
     public int soundToPlay;
 
+    public enum AIState
+    {
+        isIdle, isPatrolling, isChasing, isAttacking
+    };
+    public AIState currentState;
+
+    public float waitAtPoint = 2f;
+    public float waitCounter;
+
+    public float timeBetweenAttacks = 2f;
+    public float attackCounter;
+
     // Start is called before the first frame update
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        waitCounter = waitAtPoint;
     }
 
     // Update is called once per frame
     void Update()
     {
         distanceToTarget = Vector3.Distance(target.position, transform.position);
-        if (isProvoked)
-        {
-            EngageTarget();
-        }
-        else
-        {
-            navMeshAgent.SetDestination(patrolPoints[currentPatrolPoint].position);
 
-            if(navMeshAgent.remainingDistance <= .2f)
-            {
-                currentPatrolPoint++;
-                if (currentPatrolPoint >=  patrolPoints.Length)
+        switch (currentState)
+        {
+            case AIState.isIdle:
+                //set animation moving to false
+                if (waitCounter > 0)
                 {
-                    currentPatrolPoint = 0;
+                    waitCounter -= Time.deltaTime;
+                }
+                else
+                {
+                    currentState = AIState.isPatrolling;
+                    navMeshAgent.SetDestination(patrolPoints[currentPatrolPoint].position);
                 }
 
-                navMeshAgent.SetDestination(patrolPoints[currentPatrolPoint].position);
-            }
-        }
+                if (distanceToTarget <= chaseRange)
+                {
+                    currentState = AIState.isChasing;
+                    //set animation moving
+                }
+                break;
 
+            case AIState.isPatrolling:
+                //navMeshAgent.SetDestination(patrolPoints[currentPatrolPoint].position);
 
-        if (distanceToTarget <= chaseRange)
-        {
-            isProvoked = true;
-        }
-        else if (distanceToTarget >= chaseRange)
-        {
-            isProvoked = false;
+                if (navMeshAgent.remainingDistance <= .2f)
+                {
+                    currentPatrolPoint++;
+                    if (currentPatrolPoint >= patrolPoints.Length)
+                    {
+                        currentPatrolPoint = 0;
+                    }
+
+                    //navMeshAgent.SetDestination(patrolPoints[currentPatrolPoint].position);
+                    currentState = AIState.isIdle;
+                    waitCounter = waitAtPoint;
+                }
+
+                if (distanceToTarget <= chaseRange)
+                {
+                    currentState = AIState.isChasing;
+                }
+                //set animation moving true
+                break;
+
+            case AIState.isChasing:
+                ChaseTarget();
+
+                if(distanceToTarget <= attackRange)
+                {
+                    currentState = AIState.isAttacking;
+                    //set animation attack
+                    //->anim.SetTrigger("Attack");
+                    //anim.SetBool("IsMoving", false);
+
+                    navMeshAgent.velocity = Vector3.zero;
+                    navMeshAgent.isStopped = true;
+
+                    attackCounter = timeBetweenAttacks;
+                }
+
+                break;
+
+            case AIState.isAttacking:
+
+                transform.LookAt(target.transform, Vector3.up);
+                transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
+
+                attackCounter -= Time.deltaTime;
+                if(attackCounter <= 0)
+                {
+                    if(distanceToTarget <= attackRange)
+                    {
+                        //anime.SetTrigger("Attack");
+                        attackCounter = timeBetweenAttacks;
+                    }
+                }
+
+                break;
         }
     }
 
