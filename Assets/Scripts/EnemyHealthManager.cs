@@ -9,6 +9,8 @@ public class EnemyHealthManager : MonoBehaviour
 
     public int deathSound;
 
+    public GameObject deathEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,10 @@ public class EnemyHealthManager : MonoBehaviour
             AudioManager.instance.PlaySFX(deathSound);
 
             Destroy(gameObject);
+
+            Player.instance.Bounce();
+
+            Instantiate(deathEffect, transform.position, transform.rotation);
         }
     }
 }

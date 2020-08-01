@@ -50,6 +50,8 @@ public class Player : MonoBehaviour
     bool isJumping = false;
     float inAirTime = 0;
 
+    public float bounceForce = 8f;
+
     public float jumpTimeCounter;
     public float jumpTime;
 
@@ -282,6 +284,12 @@ public class Player : MonoBehaviour
         isKnocking = true;
         knockbackCounter = knockBackLength;
         velocity.y = knockbackPower.y;
+        mover.Move(velocity * Time.deltaTime);
+    }
+
+    public void Bounce()
+    {
+        velocity.y = bounceForce;
         mover.Move(velocity * Time.deltaTime);
     }
 }
