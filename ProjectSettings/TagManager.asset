@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - ptfmVertical
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -102,6 +102,15 @@ public class EnemyAI : MonoBehaviour
                     attackCounter = timeBetweenAttacks;
                 }
 
+                if(distanceToTarget > chaseRange)
+                {
+                    currentState = AIState.isIdle;
+                    waitCounter = waitAtPoint;
+
+                    navMeshAgent.velocity = Vector3.zero;
+                    navMeshAgent.SetDestination(transform.position);
+                }
+
                 break;
 
             case AIState.isAttacking:
@@ -112,10 +121,17 @@ public class EnemyAI : MonoBehaviour
                 attackCounter -= Time.deltaTime;
                 if(attackCounter <= 0)
                 {
-                    if(distanceToTarget <= attackRange)
+                    if(distanceToTarget < attackRange)
                     {
                         //anime.SetTrigger("Attack");
                         attackCounter = timeBetweenAttacks;
+                    }
+                    else
+                    {
+                        currentState = AIState.isIdle;
+                        waitCounter = waitAtPoint;
+
+                        navMeshAgent.isStopped = false;
                     }
                 }
 
@@ -152,12 +168,12 @@ public class EnemyAI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             HealthManager.instance.Hurt();
             AudioManager.instance.PlaySFX(soundToPlay);
         }
-    }
+    }*/
 }
