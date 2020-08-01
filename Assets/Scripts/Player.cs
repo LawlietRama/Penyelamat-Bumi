@@ -50,7 +50,9 @@ public class Player : MonoBehaviour
     bool isJumping = false;
     float inAirTime = 0;
 
-    public float bounceForce = 8f;
+    public float bounceForceY = 8f;
+    public float bounceForceX = 8f;
+    public float bounceForceZ = 8f;
 
     public float jumpTimeCounter;
     public float jumpTime;
@@ -289,7 +291,18 @@ public class Player : MonoBehaviour
 
     public void Bounce()
     {
-        velocity.y = bounceForce;
-        mover.Move(velocity * Time.deltaTime);
+        velocity.y = bounceForceY;
+        //velocity.x = bounceForce;
+        mover.Move(new Vector3(0, velocity.y, 0) * Time.deltaTime);
+    }
+
+
+    public void BounceTrampoline(float bounceForceX, float bounceForceY, float bounceForceZ)
+    {
+        velocity.y = bounceForceY;
+        velocity.x = bounceForceX;
+        velocity.z = bounceForceZ;
+        velocity.y = Mathf.Clamp(velocity.y, -9.8f, bounceForceY);
+        mover.Move(new Vector3(0, velocity.y, 0) * Time.deltaTime);
     }
 }
