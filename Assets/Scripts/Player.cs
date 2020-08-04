@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     public static Player instance;
 
+    public FloatingJoystick floatingJoystick;
+    public ButtonManager buttonManager;
 
     //anim
     public Animator anim;
@@ -153,7 +155,11 @@ public class Player : MonoBehaviour
 
     void DoInput()
     {
-        input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+
+
+        //input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));  ORIGINAL
+        input = new Vector2(floatingJoystick.Horizontal, floatingJoystick.Vertical);
         input = Vector2.ClampMagnitude(input, 1);                                       //biar untuk pergerakan diagonal nilainya gak lebih dari 1... kan kita pengen bikin pergerakan kita berbentuk lingkaran bukan persegi...
         
         if (input.magnitude > allowPlayerRotation && grounded)
@@ -234,7 +240,8 @@ public class Player : MonoBehaviour
     void DoJump()
     {
 
-       if (grounded == true && Input.GetButtonDown("Jump"))
+        //if (grounded == true && Input.GetButtonDown("Jump"))
+        if (grounded == true && buttonManager.pressed)
         {
             isJumping = true;
             anim.SetTrigger("takeOff");
@@ -243,7 +250,8 @@ public class Player : MonoBehaviour
                                    //animasi lompat biasa
 
         }
-        if (Input.GetButton("Jump") && isJumping == true)
+        //if (Input.GetButton("Jump") && isJumping == true)
+        if (buttonManager.pressed && isJumping == true)
         {
                //animasi menghempaskan kaki di udara
             if (jumpTimeCounter>0)
@@ -256,7 +264,8 @@ public class Player : MonoBehaviour
                 isJumping = false;
             }
         }
-        if(Input.GetButtonUp("Jump"))
+        //if(Input.GetButtonUp("Jump"))
+        if(buttonManager.pressed == false)
         {
             isJumping = false;
         }
