@@ -58,6 +58,7 @@ public class Player : MonoBehaviour
 
     public float jumpTimeCounter;
     public float jumpTime;
+    public bool holdJump = false;
 
     //Health
     public bool alive;
@@ -77,6 +78,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         alive = true;
+        holdJump = false;
         transform.position = startPosition;
         anim = GetComponent<Animator>();
         mover = GetComponent<CharacterController>();
@@ -241,8 +243,9 @@ public class Player : MonoBehaviour
     {
 
         //if (grounded == true && Input.GetButtonDown("Jump"))
-        if (grounded == true && buttonManager.pressed)
+        if (grounded == true && buttonManager.pressed && holdJump == false)
         {
+            holdJump = true;
             isJumping = true;
             anim.SetTrigger("takeOff");
             jumpTimeCounter = jumpTime;
@@ -253,6 +256,7 @@ public class Player : MonoBehaviour
         //if (Input.GetButton("Jump") && isJumping == true)
         if (buttonManager.pressed && isJumping == true)
         {
+            holdJump = true;
                //animasi menghempaskan kaki di udara
             if (jumpTimeCounter>0)
             {
@@ -268,6 +272,7 @@ public class Player : MonoBehaviour
         if(buttonManager.pressed == false)
         {
             isJumping = false;
+            holdJump = false;
         }
            // Debug.Log(velocity.y);
         
