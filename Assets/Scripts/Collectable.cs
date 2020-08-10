@@ -11,14 +11,7 @@ public class Collectable : MonoBehaviour
         if (other.tag == "Player")
         {
             //nambah skor
-            if (gameObject.name == "Botol")
-            {
-                ScoreCounter.score[0]++;
-            }
-            else if (gameObject.name == "Daun")
-            {
-                ScoreCounter.score[1]++;
-            }
+            ScoreCounter.score++;
 
             //ngilangin objek
             Destroy(this.gameObject);

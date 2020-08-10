@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public Transform cam;
     CharacterController mover;
     public GameObject[] playerModel;
+    public GameObject enemyHurtBox;
 
     // Input
     Vector2 input;
@@ -109,6 +110,7 @@ public class Player : MonoBehaviour
         if(isKnocking)
         {
             knockbackCounter -= Time.deltaTime;
+            enemyHurtBox.SetActive(false);
 
             float yStore = velocity.y;
             velocity = (transform.forward * -knockbackPower.x);
@@ -127,6 +129,7 @@ public class Player : MonoBehaviour
             if(knockbackCounter <= 0)
             {
                 isKnocking = false;
+                enemyHurtBox.SetActive(true);
             }
         }
         
