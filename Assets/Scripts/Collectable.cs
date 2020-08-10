@@ -6,12 +6,13 @@ public class Collectable : MonoBehaviour
 {
     public GameObject pickupEffect;
     public int soundToPlay;
+    public int value = 1;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             //nambah skor
-            ScoreCounter.score++;
+            ScoreCounter.score += value;
 
             //ngilangin objek
             Destroy(this.gameObject);
