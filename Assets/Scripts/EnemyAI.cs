@@ -115,8 +115,8 @@ public class EnemyAI : MonoBehaviour
 
             case AIState.isAttacking:
 
-                transform.LookAt(target.transform, Vector3.up);
-                transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
+                /*transform.LookAt(target.transform, Vector3.up);
+                transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);*/
 
                 attackCounter -= Time.deltaTime;
                 if(attackCounter <= 0)

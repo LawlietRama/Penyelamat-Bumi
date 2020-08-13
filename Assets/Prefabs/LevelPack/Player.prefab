@@ -1354,6 +1354,7 @@ MonoBehaviour:
   playerModel:
   - {fileID: 4015279864529472636}
   - {fileID: 3819680776154119139}
+  enemyHurtBox: {fileID: 982682160}
   speed: 15
   allowPlayerRotation: 0.1
   grounded: 0
@@ -1363,6 +1364,7 @@ MonoBehaviour:
   bounceForceZ: 8
   jumpTimeCounter: 0
   jumpTime: 0.25
+  holdJump: 0
   alive: 0
   damage: 1
   isKnocking: 0
