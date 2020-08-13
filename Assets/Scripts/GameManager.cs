@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class GameManager : MonoBehaviour
     private Vector3 respawnPosition;
 
     public GameObject deathEffect;
+
+    public int levelEndMusic = 8;
+
+    public string levelToLoad;
 
     private void Awake()
     {
@@ -108,6 +113,19 @@ public class GameManager : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
+    }
+
+
+    public IEnumerator LevelEndCo()
+    {
+        AudioManager.instance.PlayMusic(levelEndMusic);
+        Player.instance.stopMove = true;
+
+        yield return new WaitForSeconds(2f);
+        Debug.Log("Level Ended");
+
+        SceneManager.LoadScene(levelToLoad);
+
     }
 
 }

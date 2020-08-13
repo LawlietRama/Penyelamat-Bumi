@@ -7,7 +7,10 @@ public class Player : MonoBehaviour
     public static Player instance;
 
     public FloatingJoystick floatingJoystick;
-    public ButtonManager buttonManager;
+    public ButtonManager jumpButton;
+    public ButtonManager interactButton;
+
+    public bool stopMove;
 
     //anim
     public Animator anim;
@@ -101,7 +104,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isKnocking)
+        if(!isKnocking && !stopMove)
         {
             Move();
             mover.Move(velocity * Time.deltaTime);
@@ -131,6 +134,13 @@ public class Player : MonoBehaviour
                 isKnocking = false;
                 enemyHurtBox.SetActive(true);
             }
+        }
+
+        if(stopMove == true)
+        {
+            velocity = Vector3.zero;
+            velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
+            mover.Move(velocity);
         }
         
     }
@@ -247,7 +257,7 @@ public class Player : MonoBehaviour
     {
 
         //if (grounded == true && Input.GetButtonDown("Jump"))
-        if (grounded == true && buttonManager.pressed && holdJump == false)
+        if (grounded == true && jumpButton.pressed && holdJump == false)
         {
             holdJump = true;
             isJumping = true;
@@ -258,7 +268,7 @@ public class Player : MonoBehaviour
 
         }
         //if (Input.GetButton("Jump") && isJumping == true)
-        if (buttonManager.pressed && isJumping == true)
+        if (jumpButton.pressed && isJumping == true)
         {
             holdJump = true;
                //animasi menghempaskan kaki di udara
@@ -273,7 +283,7 @@ public class Player : MonoBehaviour
             }
         }
         //if(Input.GetButtonUp("Jump"))
-        if(buttonManager.pressed == false)
+        if(jumpButton.pressed == false)
         {
             isJumping = false;
             holdJump = false;
@@ -287,6 +297,20 @@ public class Player : MonoBehaviour
     {
         if (mExternalMovement != Vector3.zero)
         {
+            if (grounded)
+            {
+                anim.SetBool("isJumping", false);
+                inAirTime = 0;
+                velocity.y = -0.5f;
+            }
+            else if (!grounded)
+            {
+                inAirTime++;
+                anim.SetBool("isJumping", true);
+                anim.SetFloat("inAirTime", inAirTime * Time.deltaTime);
+                velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
+            }
+            mExternalMovement.y = Mathf.Clamp(mExternalMovement.y, -9.8f, 9.8f);
             mover.Move(mExternalMovement);
         }
     }
@@ -321,6 +345,7 @@ public class Player : MonoBehaviour
         velocity.x = bounceForceX;
         velocity.z = bounceForceZ;
         velocity.y = Mathf.Clamp(velocity.y, -9.8f, bounceForceY);
+        velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
         mover.Move(new Vector3(0, velocity.y, 0) * Time.deltaTime);
     }
 }

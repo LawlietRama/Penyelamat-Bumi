@@ -40,6 +40,7 @@ public class MovePlatform : MonoBehaviour
         }
         if (mPlayer != null)
         {
+            
             mPlayer.ExternalMovement = moveDir;
         }
         transform.position += moveDir;
