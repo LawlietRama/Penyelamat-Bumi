@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class LSLevelEntry : MonoBehaviour
 {
-    public string levelName, levelToCheck;
+    public string levelName, levelToCheck, displayName;
 
     private bool canLoadLevel, levelUnlocked;
 
     public GameObject mapPointActive, mapPointInactive;
+    private bool levelLoading;
 
     // Start is called before the first frame update
     void Start()
@@ -26,14 +27,20 @@ public class LSLevelEntry : MonoBehaviour
             mapPointInactive.SetActive(true);
             levelUnlocked = false;
         }
+
+        if(PlayerPrefs.GetString("CurrentLevel") == levelName)
+        {
+            Player.instance.transform.position = transform.position;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Player.instance.interactButton.pressed && canLoadLevel == true && levelUnlocked)
+        if(Player.instance.interactButton.pressed && canLoadLevel == true && levelUnlocked && !levelLoading)
         {
-            SceneManager.LoadScene(levelName);
+            StartCoroutine(LevelLoadCo());
+            levelLoading = true;
         }
     }
 
@@ -42,6 +49,9 @@ public class LSLevelEntry : MonoBehaviour
         if(other.tag == "Player")
         {
             canLoadLevel = true;
+
+            LSUIManager.instance.lNamePanel.SetActive(true);
+            LSUIManager.instance.lNameText.text = displayName;
         }
     }
 
@@ -50,6 +60,19 @@ public class LSLevelEntry : MonoBehaviour
         if(other.tag == "Player")
         {
             canLoadLevel = false;
+
+            LSUIManager.instance.lNamePanel.SetActive(false);
         }
+    }
+
+    public IEnumerator LevelLoadCo()
+    {
+        Player.instance.stopMove = true;
+        UIManager.instance.fadeToBlack = true;
+
+        yield return new WaitForSeconds(2f);
+
+        SceneManager.LoadScene(levelName);
+        PlayerPrefs.SetString("CurrentLevel", levelName);
     }
 }

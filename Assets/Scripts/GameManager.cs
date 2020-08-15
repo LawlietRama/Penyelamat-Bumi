@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         /*Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;*/
 
-        respawnPosition = Player.instance.startPosition;
+        respawnPosition = Player.instance.transform.position;
     }
 
     // Update is called once per frame
@@ -122,12 +122,12 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.instance.PlayMusic(levelEndMusic);
         Player.instance.stopMove = true;
+        UIManager.instance.fadeToBlack = true;
 
         yield return new WaitForSeconds(2f);
         Debug.Log("Level Ended");
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
-
         SceneManager.LoadScene(levelToLoad);
 
     }

@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     [Range(0, 1f)]
     public float StopAnimTime = 0.15f;
 
-    public Vector3 startPosition;
+    //public Vector3 startPosition;
 
     // Objects
     public Transform cam;
@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
     {
         alive = true;
         holdJump = false;
-        transform.position = startPosition;
+        //transform.position = startPosition;
         anim = GetComponent<Animator>();
         mover = GetComponent<CharacterController>();
     }
