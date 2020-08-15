@@ -2658,6 +2658,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 3695901255770607875, guid: eb8ab1c1291b3424da24cf462ac8afed,
     type: 3}
+  levelEndMusic: 8
+  levelToLoad: LevelSelect
 --- !u!114 &4604839091949726115
 MonoBehaviour:
   m_ObjectHideFlags: 0

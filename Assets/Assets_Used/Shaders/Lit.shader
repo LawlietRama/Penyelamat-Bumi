@@ -118,8 +118,10 @@ Shader "Universal Render Pipeline/Lit"
             #pragma vertex LitPassVertex
             #pragma fragment LitPassFragment
 
-            #include "LitInput.hlsl"
-            #include "LitForwardPass.hlsl"
+            
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/LitInput.hlsl"
+            
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/LitForwardPass.hlsl"
             ENDHLSL
         }
 

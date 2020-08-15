@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     public float fadeSpeed = 2f;
     public bool fadeToBlack, fadeFromBlack;
 
-    public GameObject pauseScreen, optionsScreen, trashBinScreen;
+    public GameObject pauseScreen, optionsScreen, trashBinScreen, floatingJoystick, jumpButton, interactButton;
 
     public Slider musicVolSlider, sfxVolSlider;
 
@@ -74,11 +74,13 @@ public class UIManager : MonoBehaviour
     public void LevelSelect()
     {
         SceneManager.LoadScene(levelSelect);
+        Time.timeScale = 1;
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene(mainMenu);
+        Time.timeScale = 1;
     }
 
     public void SetMusicLevel()

@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
         if(UIManager.instance.pauseScreen.activeInHierarchy)
         {
             UIManager.instance.pauseScreen.SetActive(false);
+            UIManager.instance.floatingJoystick.SetActive(true);
             Time.timeScale = 1f;
 
             Cursor.visible = false;
@@ -86,6 +87,7 @@ public class GameManager : MonoBehaviour
         else
         {
             UIManager.instance.pauseScreen.SetActive(true);
+            UIManager.instance.floatingJoystick.SetActive(false);
             UIManager.instance.CloseOptions();
             Time.timeScale = 0f;
 
@@ -123,6 +125,8 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
         Debug.Log("Level Ended");
+
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
 
         SceneManager.LoadScene(levelToLoad);
 

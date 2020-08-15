@@ -263,7 +263,7 @@ public class Player : MonoBehaviour
             isJumping = true;
             anim.SetTrigger("takeOff");
             jumpTimeCounter = jumpTime;
-            velocity.y = 15f;
+            velocity.y = 15f;       //15f
                                    //animasi lompat biasa
 
         }
@@ -279,6 +279,7 @@ public class Player : MonoBehaviour
             }
             else
             {
+                
                 isJumping = false;
             }
         }
@@ -287,6 +288,7 @@ public class Player : MonoBehaviour
         {
             isJumping = false;
             holdJump = false;
+            
         }
            // Debug.Log(velocity.y);
         
