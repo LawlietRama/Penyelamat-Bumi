@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
 
     public GameObject pauseScreen, optionsScreen, trashBinScreen, floatingJoystick, jumpButton, interactButton;
 
+    public Text trashText;
+
     public Slider musicVolSlider, sfxVolSlider;
 
     public string levelSelect, mainMenu;
