@@ -4560,7 +4560,6 @@ GameObject:
   - component: {fileID: 575483131500499027}
   - component: {fileID: 575483131500499038}
   - component: {fileID: 575483131500499037}
-  - component: {fileID: 575483131500499036}
   m_Layer: 5
   m_Name: Score_Sampah
   m_TagString: Untagged
@@ -4631,20 +4630,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2
---- !u!114 &575483131500499036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2611719777910610953, guid: b76178a22d71a8b4caad638340b4fe05,
-    type: 3}
-  m_PrefabInstance: {fileID: 2576683058562878549}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575483131500499026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b4fc3275771514e95111181b3c2e4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Text: 0
 --- !u!1 &575483131520849560
 GameObject:
   m_ObjectHideFlags: 0
@@ -6103,6 +6089,7 @@ MonoBehaviour:
   floatingJoystick: {fileID: 6043104847083429331}
   jumpButton: {fileID: 575483131739126129}
   interactButton: {fileID: 3716779857009107009}
+  trashText: {fileID: 575483131500499037}
   musicVolSlider: {fileID: 575483129801794042}
   sfxVolSlider: {fileID: 575483131795415308}
   levelSelect: LevelSelect
@@ -6554,7 +6541,8 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b76178a22d71a8b4caad638340b4fe05, type: 3}
 --- !u!1001 &3767043523721209722
 PrefabInstance:
@@ -6750,15 +6738,15 @@ PrefabInstance:
       objectReference: {fileID: 5454250617550067508}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a72ee06c5a1d8ab4caab38626c0ee8a8, type: 3}
---- !u!4 &6842074440718348342 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 949843513471844675, guid: a72ee06c5a1d8ab4caab38626c0ee8a8,
-    type: 3}
-  m_PrefabInstance: {fileID: 6043104847932764533}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6842074440197826472 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 949843514059675357, guid: a72ee06c5a1d8ab4caab38626c0ee8a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6043104847932764533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6842074440718348342 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 949843513471844675, guid: a72ee06c5a1d8ab4caab38626c0ee8a8,
     type: 3}
   m_PrefabInstance: {fileID: 6043104847932764533}
   m_PrefabAsset: {fileID: 0}

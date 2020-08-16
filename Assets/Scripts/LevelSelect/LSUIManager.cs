@@ -10,6 +10,8 @@ public class LSUIManager : MonoBehaviour
     public Text lNameText;
     public GameObject lNamePanel;
 
+    public Text trashText;
+
     private void Awake()
     {
         instance = this;

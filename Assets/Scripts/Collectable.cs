@@ -12,7 +12,7 @@ public class Collectable : MonoBehaviour
         if (other.tag == "Player")
         {
             //nambah skor
-            ScoreCounter.score += value;
+            GameManager.instance.AddTrashes(value);
 
             //ngilangin objek
             Destroy(this.gameObject);

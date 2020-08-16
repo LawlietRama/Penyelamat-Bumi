@@ -31,6 +31,7 @@ public class LSLevelEntry : MonoBehaviour
         if(PlayerPrefs.GetString("CurrentLevel") == levelName)
         {
             Player.instance.transform.position = transform.position;
+            LSResetPosition.instance.respawnPosition = transform.position;
         }
     }
 
@@ -52,6 +53,15 @@ public class LSLevelEntry : MonoBehaviour
 
             LSUIManager.instance.lNamePanel.SetActive(true);
             LSUIManager.instance.lNameText.text = displayName;
+
+            if(PlayerPrefs.HasKey(levelName + "_trashes"))
+            {
+                LSUIManager.instance.trashText.text = PlayerPrefs.GetInt(levelName + "_trashes").ToString();
+            }
+            else
+            {
+                LSUIManager.instance.trashText.text = "???";
+            }
         }
     }
 

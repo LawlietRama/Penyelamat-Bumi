@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     public string levelToLoad;
 
+    public int currentTrashes;
+
     private void Awake()
     {
         instance = this;
@@ -73,6 +75,12 @@ public class GameManager : MonoBehaviour
         Debug.Log("CHECKPOINT");
     }
 
+    public void AddTrashes(int trashesToAdd)
+    {
+        currentTrashes += trashesToAdd;
+        UIManager.instance.trashText.text = "" + currentTrashes;
+    }
+
     public void PauseUnpause()
     {
         if(UIManager.instance.pauseScreen.activeInHierarchy)
@@ -128,6 +136,19 @@ public class GameManager : MonoBehaviour
         Debug.Log("Level Ended");
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
+
+        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_trashes"))
+        {
+            if(currentTrashes > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_trashes"))
+            {
+                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_trashes", currentTrashes);
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_trashes", currentTrashes);
+        }
+
         SceneManager.LoadScene(levelToLoad);
 
     }
