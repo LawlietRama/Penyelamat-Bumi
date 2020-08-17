@@ -2734,6 +2734,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water
       objectReference: {fileID: 0}
+    - target: {fileID: 3876298999947780580, guid: 35e673e08935a82439d16e195c53ab5b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3876298999947780584, guid: 35e673e08935a82439d16e195c53ab5b,
         type: 3}
       propertyPath: m_LocalPosition.x

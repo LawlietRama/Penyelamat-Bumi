@@ -46,10 +46,10 @@ public class Player : MonoBehaviour
     float turnSpeedHigh = 45;
     public float allowPlayerRotation = 0.1f;
 
-    private Vector3 mExternalMovement = Vector3.zero;
+    public Vector3 mExternalMovement = Vector3.zero;
 
     // Gravity
-    float grav = 9.8f;
+    float grav = 9.81f;
     [SerializeField]
     bool grounded = false;
     [SerializeField]
@@ -73,6 +73,8 @@ public class Player : MonoBehaviour
     public float knockBackLength = .5f;
     private float knockbackCounter;
     public Vector2 knockbackPower;
+
+    public float distToGround = 1f;
 
     private void Awake()
     {
@@ -139,7 +141,8 @@ public class Player : MonoBehaviour
         if(stopMove == true)
         {
             velocity = Vector3.zero;
-            velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
+            //velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
+            velocity.y -= grav * Time.deltaTime;
             mover.Move(velocity);
         }
         
@@ -175,7 +178,7 @@ public class Player : MonoBehaviour
 
         
         input = new Vector2(floatingJoystick.Horizontal, floatingJoystick.Vertical);
-        //input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         input = Vector2.ClampMagnitude(input, 1);                                       //biar untuk pergerakan diagonal nilainya gak lebih dari 1... kan kita pengen bikin pergerakan kita berbentuk lingkaran bukan persegi...
         
         if (input.magnitude > allowPlayerRotation && grounded)
@@ -202,15 +205,16 @@ public class Player : MonoBehaviour
     void CalculateGround()
     {
         
-        /*RaycastHit hit;
-        if (Physics.Raycast(transform.position + Vector3.up * 0.1f, -Vector3.up, out hit, 0.2f))
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.2f))
         {
             grounded = true;
         }
         else
-            grounded = false;*/
-
-        grounded = mover.isGrounded;
+        {
+            grounded = false;
+        }
+        //grounded = mover.isGrounded; //original
 
     }
 
@@ -218,7 +222,7 @@ public class Player : MonoBehaviour
     {
         intent = camF * input.y + camR * input.x;
 
-        float tS = velocity.magnitude/5;
+        float tS = velocity.magnitude/speed;        //aslinya 5
         turnSpeed = Mathf.Lerp(turnSpeedHigh, turnSpeedLow, tS);
         if(input.magnitude > 0)
         {
@@ -247,10 +251,17 @@ public class Player : MonoBehaviour
         {
             inAirTime++;            
             anim.SetBool("isJumping", true);
-            anim.SetFloat("inAirTime", inAirTime * Time.deltaTime);
-            velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
+            if(mExternalMovement == Vector3.zero)
+            {
+                anim.SetFloat("inAirTime", inAirTime * Time.deltaTime);
+            }
+            //velocity.y += Physics.gravity.y * 5f * Time.deltaTime; original
+            velocity.y -= grav * Time.deltaTime;
         }
-        velocity.y = Mathf.Clamp(velocity.y, -9.8f, 9.8f);
+        //velocity.y = Mathf.Clamp(velocity.y, -9.8f, 9.8f); //original
+
+        
+        velocity.y = Mathf.Clamp(velocity.y, -10f, 10f);
     }
 
     void DoJump()
@@ -299,20 +310,6 @@ public class Player : MonoBehaviour
     {
         if (mExternalMovement != Vector3.zero)
         {
-            if (grounded)
-            {
-                anim.SetBool("isJumping", false);
-                inAirTime = 0;
-                velocity.y = -0.5f;
-            }
-            else if (!grounded)
-            {
-                inAirTime++;
-                anim.SetBool("isJumping", true);
-                anim.SetFloat("inAirTime", inAirTime * Time.deltaTime);
-                velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
-            }
-            mExternalMovement.y = Mathf.Clamp(mExternalMovement.y, -9.8f, 9.8f);
             mover.Move(mExternalMovement);
         }
     }
@@ -329,8 +326,8 @@ public class Player : MonoBehaviour
     {
         isKnocking = true;
         knockbackCounter = knockBackLength;
-        velocity.y = knockbackPower.y;
-        mover.Move(velocity * Time.deltaTime);
+        velocity.y = knockbackPower.y * Time.deltaTime;
+        mover.Move(velocity);
     }
 
     public void Bounce()
