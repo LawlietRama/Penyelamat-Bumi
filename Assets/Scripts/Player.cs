@@ -47,6 +47,9 @@ public class Player : MonoBehaviour
     public float allowPlayerRotation = 0.1f;
 
     public Vector3 mExternalMovement = Vector3.zero;
+    public Vector3 bounceMovement = Vector3.zero;
+
+    public float bounceForceY = 8f;
 
     // Gravity
     float grav = 9.81f;
@@ -55,10 +58,6 @@ public class Player : MonoBehaviour
     [SerializeField]
     bool isJumping = false;
     float inAirTime = 0;
-
-    public float bounceForceY = 8f;
-    public float bounceForceX = 8f;
-    public float bounceForceZ = 8f;
 
     public float jumpTimeCounter;
     public float jumpTime;
@@ -123,7 +122,7 @@ public class Player : MonoBehaviour
 
             if(mover.isGrounded)
             {
-                velocity.y = 0f;
+                velocity.y = 0f;      //aslinya 0f
             }
 
             velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
@@ -204,16 +203,23 @@ public class Player : MonoBehaviour
 
     void CalculateGround()
     {
-        
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.2f))
+        if(mExternalMovement != Vector3.zero)
         {
-            grounded = true;
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.2f))
+            {
+                grounded = true;
+            }
+            else
+            {
+                grounded = false;
+            }
         }
         else
         {
-            grounded = false;
+            grounded = mover.isGrounded;
         }
+        
         //grounded = mover.isGrounded; //original
 
     }
@@ -312,6 +318,11 @@ public class Player : MonoBehaviour
         {
             mover.Move(mExternalMovement);
         }
+        if (bounceMovement != Vector3.zero)
+        {
+            //bounceMovement.y += Physics.gravity.y * Time.deltaTime;
+            mover.Move(bounceMovement);
+        }
     }
 
     public Vector3 ExternalMovement
@@ -326,25 +337,14 @@ public class Player : MonoBehaviour
     {
         isKnocking = true;
         knockbackCounter = knockBackLength;
-        velocity.y = knockbackPower.y * Time.deltaTime;
-        mover.Move(velocity);
+        velocity.y = knockbackPower.y;
+        mover.Move(velocity * Time.deltaTime);
     }
 
     public void Bounce()
     {
         velocity.y = bounceForceY;
         //velocity.x = bounceForce;
-        mover.Move(new Vector3(0, velocity.y, 0) * Time.deltaTime);
-    }
-
-
-    public void BounceTrampoline(float bounceForceX, float bounceForceY, float bounceForceZ)
-    {
-        velocity.y = bounceForceY;
-        velocity.x = bounceForceX;
-        velocity.z = bounceForceZ;
-        velocity.y = Mathf.Clamp(velocity.y, -9.8f, bounceForceY);
-        velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
         mover.Move(new Vector3(0, velocity.y, 0) * Time.deltaTime);
     }
 }
