@@ -15,10 +15,4 @@ public class CameraChanger : MonoBehaviour
             camAfter.SetActive(true);
         }
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        camBefore.SetActive(true);
-        camAfter.SetActive(false);
-    }
 }

@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public string levelToLoad;
 
     public int currentTrashes;
+    public int currentStars;
+    public int currentDeaths;
 
     private void Awake()
     {
