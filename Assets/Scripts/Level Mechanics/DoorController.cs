@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    public bool shouldOpen;
+    //public bool shouldOpen;
 
     public Transform theDoor, openRot;
 
     public float openSpeed;
 
     private Quaternion startRot;
+
+    public ButtonController theButton;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,7 @@ public class DoorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(shouldOpen)
+        if(theButton.isPressed)
         {
             theDoor.rotation = Quaternion.Slerp(theDoor.rotation, openRot.rotation, openSpeed * Time.deltaTime);
         }
