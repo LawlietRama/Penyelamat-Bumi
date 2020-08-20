@@ -172,10 +172,6 @@ public class Player : MonoBehaviour
 
     void DoInput()
     {
-
-
-
-        
         input = new Vector2(floatingJoystick.Horizontal, floatingJoystick.Vertical);
         input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         input = Vector2.ClampMagnitude(input, 1);                                       //biar untuk pergerakan diagonal nilainya gak lebih dari 1... kan kita pengen bikin pergerakan kita berbentuk lingkaran bukan persegi...

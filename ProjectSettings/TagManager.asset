@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ptfmVertical
   - Enemy
+  - NPC
   layers:
   - Default
   - TransparentFX
