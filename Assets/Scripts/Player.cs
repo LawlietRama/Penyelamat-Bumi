@@ -75,6 +75,11 @@ public class Player : MonoBehaviour
 
     public float distToGround = 1f;
 
+    public bool isBouncing;
+    public float bouncingLength = .5f;
+    private float bouncingCounter;
+    public Vector3 bouncingPower;
+
     private void Awake()
     {
         instance = this;
@@ -122,7 +127,7 @@ public class Player : MonoBehaviour
 
             if(mover.isGrounded)
             {
-                velocity.y = 0f;      //aslinya 0f
+                velocity.y = 0f;
             }
 
             velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
@@ -137,7 +142,27 @@ public class Player : MonoBehaviour
             }
         }
 
-        if(stopMove == true)
+        if (isBouncing)
+        {
+            bouncingCounter -= Time.deltaTime;
+
+            if (mover.isGrounded)
+            {
+                velocity.y = 0f;
+            }
+
+            velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
+
+
+            mover.Move(velocity * Time.deltaTime);
+
+            if (bouncingCounter <= 0)
+            {
+                isBouncing = false;
+            }
+        }
+
+        if (stopMove == true)
         {
             velocity = Vector3.zero;
             //velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
@@ -339,8 +364,10 @@ public class Player : MonoBehaviour
 
     public void Bounce()
     {
-        velocity.y = bounceForceY;
+        isBouncing = true;
+        bouncingCounter = bouncingLength;
+        velocity.y = bouncingPower.y;
         //velocity.x = bounceForce;
-        mover.Move(new Vector3(0, velocity.y, 0) * Time.deltaTime);
+        mover.Move(velocity * Time.deltaTime);
     }
 }

@@ -55,6 +55,7 @@ public class UIDialogueManager : MonoBehaviour
                 CameraChange(false);
                 FadeUI(false, .2f, 0);
                 Sequence s = DOTween.Sequence();
+                DOTween.SetTweensCapacity(200, 50);
                 s.AppendInterval(.8f);
                 s.AppendCallback(() => ResetState());
                 //ResetState();
@@ -70,6 +71,7 @@ public class UIDialogueManager : MonoBehaviour
     public void FadeUI(bool show, float time, float delay)
     {
         Sequence s = DOTween.Sequence();
+        DOTween.SetTweensCapacity(200, 50);
         s.AppendInterval(delay);
         s.Append(canvasGroup.DOFade(show ? 1 : 0, time));
         if (show)
