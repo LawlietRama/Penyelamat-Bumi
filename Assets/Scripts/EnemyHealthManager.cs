@@ -26,14 +26,14 @@ public class EnemyHealthManager : MonoBehaviour
     public void TakeDamage()
     {
         currentHealth--;
-
-        if(currentHealth <= 0)
+        Player.instance.Bounce();
+        if (currentHealth <= 0)
         {
             AudioManager.instance.PlaySFX(deathSound);
 
             Destroy(gameObject);
 
-            Player.instance.Bounce();
+            
 
             Instantiate(deathEffect, transform.position, transform.rotation);
             Instantiate(itemToDrop, transform.position, transform.rotation);
