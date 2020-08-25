@@ -17,6 +17,7 @@ public class UIDialogueManager : MonoBehaviour
     public Image nameBubble;
     public TextMeshProUGUI nameTMP;
 
+    [HideInInspector]
     public NPCScript currentNPC;
 
     public int dialogueIndex;
@@ -30,6 +31,7 @@ public class UIDialogueManager : MonoBehaviour
     public GameObject dialogueCam;
 
     public ButtonManager interactButton;
+    public GameObject interactButtonObject;
 
     private void Awake()
     {
@@ -59,9 +61,10 @@ public class UIDialogueManager : MonoBehaviour
                 s.AppendCallback(() => ResetState());
                 //ResetState();
             }
-
-            if (nextDialogue)
+            else if (nextDialogue)
             {
+                interactButton.pressed = false;
+                interactButtonObject.SetActive(false);
                 animatedText.ReadText(currentNPC.dialogue.conversationBlock[dialogueIndex]);
             }
         }
@@ -78,6 +81,8 @@ public class UIDialogueManager : MonoBehaviour
             dialogueIndex = 0;
             s.Join(canvasGroup.transform.DOScale(0, time * 2).From().SetEase(Ease.OutBack));
             s.AppendCallback(() => animatedText.ReadText(currentNPC.dialogue.conversationBlock[0]));
+            interactButton.pressed = false;
+            interactButtonObject.SetActive(false);
         }
     }
 
@@ -117,11 +122,14 @@ public class UIDialogueManager : MonoBehaviour
         {
             dialogueIndex++;
             nextDialogue = true;
+            canExit = false;
+            interactButtonObject.SetActive(true);
         }
         else
         {
             nextDialogue = false;
             canExit = true;
+            interactButtonObject.SetActive(true);
         }
     }
 
