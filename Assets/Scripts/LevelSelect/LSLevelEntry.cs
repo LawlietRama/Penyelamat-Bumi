@@ -54,9 +54,9 @@ public class LSLevelEntry : MonoBehaviour
             LSUIManager.instance.lNamePanel.SetActive(true);
             LSUIManager.instance.lNameText.text = displayName;
 
-            if(PlayerPrefs.HasKey(levelName + "_trashes"))
+            if(PlayerPrefs.HasKey(levelName + "_stars"))
             {
-                LSUIManager.instance.trashText.text = PlayerPrefs.GetInt(levelName + "_trashes").ToString();
+                LSUIManager.instance.trashText.text = PlayerPrefs.GetInt(levelName + "_stars").ToString();
             }
             else
             {

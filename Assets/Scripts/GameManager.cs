@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     public int currentStars;
     public int currentDeaths;
 
+    [Header("Ketika melanggar lalu lintas")]
+    public int currentViolateTraffic;
+
     private void Awake()
     {
         instance = this;
@@ -83,6 +86,11 @@ public class GameManager : MonoBehaviour
         UIManager.instance.trashText.text = "" + currentTrashes;
     }
 
+    public void AddViolate()
+    {
+        currentViolateTraffic += 1;
+    }
+
     public void PauseUnpause()
     {
         if(UIManager.instance.pauseScreen.activeInHierarchy)
@@ -139,7 +147,7 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
 
-        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_trashes"))
+        /*if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_trashes"))
         {
             if(currentTrashes > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_trashes"))
             {
@@ -149,6 +157,18 @@ public class GameManager : MonoBehaviour
         else
         {
             PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_trashes", currentTrashes);
+        }*/
+
+        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_stars"))
+        {
+            if (currentStars > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_stars"))
+            {
+                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_stars", currentStars);
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_stars", currentStars);
         }
 
         SceneManager.LoadScene(levelToLoad);
