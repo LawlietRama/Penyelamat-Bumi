@@ -49,9 +49,8 @@ public class StarPickup : MonoBehaviour
         if (trash == true)
         {
             starText.text = "" + GameManager.instance.currentTrashes + "/" + maxTrash;
-            if (GameManager.instance.currentTrashes >= maxTrash)
+            if (GameManager.instance.currentTrashes >= maxTrash && active.activeSelf == false)
             {
-                Debug.Log("Bintang unlocked cuy");
                 inActive.SetActive(false);
                 active.SetActive(true);
             }
@@ -59,7 +58,7 @@ public class StarPickup : MonoBehaviour
         else if (violateTrafficLaw == true)
         {
             starText.text = "" + GameManager.instance.currentViolateTraffic + "/" + maxViolate;
-            if (GameManager.instance.currentViolateTraffic <= maxViolate)
+            if (GameManager.instance.currentViolateTraffic <= maxViolate && active.activeSelf == false)
             {
                 inActive.SetActive(false);
                 active.SetActive(true);
@@ -72,6 +71,7 @@ public class StarPickup : MonoBehaviour
         if(other.tag == "Player" && active.activeInHierarchy == true)
         {
             GameManager.instance.currentStars += 1;
+            UIManager.instance.starText.text = "" + GameManager.instance.currentStars;
             Instantiate(effect, transform.position, transform.rotation);
             Destroy(gameObject);
         }

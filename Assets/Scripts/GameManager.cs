@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     public int currentTrashes;
     public int currentStars;
+    public int totalStars;
     public int currentDeaths;
 
     [Header("Ketika melanggar lalu lintas")]
@@ -163,12 +164,23 @@ public class GameManager : MonoBehaviour
         {
             if (currentStars > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_stars"))
             {
+                Debug.Log("TOTAL STAR SEBELUM" + totalStars);
+                Debug.Log("Star sebelum" + PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_stars"));
+                totalStars += currentStars - PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_stars");
+                //totalStars -= PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_stars");
                 PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_stars", currentStars);
+                PlayerPrefs.SetInt("TotalStars", totalStars);
+                Debug.Log("Star sekarang" + currentStars);
+                Debug.Log("TOTAL STAR SEKARANG" + totalStars);
+
             }
+            
         }
         else
         {
             PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_stars", currentStars);
+            totalStars += currentStars;
+            PlayerPrefs.SetInt("TotalStars", totalStars);
         }
 
         SceneManager.LoadScene(levelToLoad);

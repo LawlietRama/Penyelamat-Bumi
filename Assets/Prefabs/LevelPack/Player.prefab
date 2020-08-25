@@ -10932,6 +10932,8 @@ GameObject:
   - component: {fileID: 5308908268687884891}
   - component: {fileID: 5308908268687884888}
   - component: {fileID: 5308908268687884890}
+  - component: {fileID: 4565894600618844181}
+  - component: {fileID: 1096233954018549819}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -11033,6 +11035,40 @@ MonoBehaviour:
   knockBackLength: 0.5
   knockbackPower: {x: 12, y: 12}
   distToGround: 1
+  isBouncing: 0
+  bouncingLength: 0.5
+  bouncingPower: {x: 0, y: 0, z: 0}
+--- !u!65 &4565894600618844181
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5308908268687884893}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.63, y: 3.96, z: 3.7}
+  m_Center: {x: 0, y: 1.94, z: 1.12}
+--- !u!114 &1096233954018549819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5308908268687884893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b0bcb612189e094ab75cd7a6938c67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetGroup: {fileID: 0}
+  jump: {fileID: 0}
+  interact: {fileID: 0}
+  jumpButton: {fileID: 0}
+  interactButton: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &5490885313219793329
 GameObject:
   m_ObjectHideFlags: 0

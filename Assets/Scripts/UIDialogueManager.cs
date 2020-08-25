@@ -17,7 +17,6 @@ public class UIDialogueManager : MonoBehaviour
     public Image nameBubble;
     public TextMeshProUGUI nameTMP;
 
-    [HideInInspector]
     public NPCScript currentNPC;
 
     public int dialogueIndex;

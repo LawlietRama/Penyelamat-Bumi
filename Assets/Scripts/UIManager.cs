@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     public GameObject pauseScreen, optionsScreen, trashBinScreen, floatingJoystick, jumpButton, interactButton;
 
     public Text trashText;
+    public Text starText;
 
     public Slider musicVolSlider, sfxVolSlider;
 
@@ -31,7 +32,11 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameManager.instance.totalStars = PlayerPrefs.GetInt("TotalStars");
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName(levelSelect))
+        {
+            starText.text = "" + GameManager.instance.totalStars;
+        }
     }
 
     // Update is called once per frame

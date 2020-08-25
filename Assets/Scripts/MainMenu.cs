@@ -55,6 +55,9 @@ public class MainMenu : MonoBehaviour
         for(int i = 0; i < levelNames.Length; i++)
         {
             PlayerPrefs.SetInt(levelNames[i] + "_unlocked", 0);
+            PlayerPrefs.SetInt(levelNames[i] + "_stars", 0);
+
         }
+        PlayerPrefs.SetInt("TotalStars", 0);
     }
 }

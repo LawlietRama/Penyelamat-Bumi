@@ -44,7 +44,7 @@ public class ShootingEnemy : EnemyHealthManager
 
             GameObject bulletObject = Instantiate(bulletPrefab);
             bulletObject.transform.position = transform.position + model.transform.forward;
-            bulletObject.transform.forward = model.transform.forward;
+            bulletObject.transform.forward = -model.transform.forward;
         }
     }
 }

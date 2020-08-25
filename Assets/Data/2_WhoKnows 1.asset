@@ -13,6 +13,18 @@ MonoBehaviour:
   m_Name: 2_WhoKnows 1
   m_EditorClassIdentifier: 
   conversationBlock:
-  - Do you understand?
-  - You don't?
-  - So it seems You can only be up to 3 dialogue
+  - 'Wira! Apa yang terjadi?!
+
+    Aku barusan melihat seseorang menaiki robot dan
+    terbang!'
+  - 'D-Dan semua sampah berubah menjadi monster!
+
+    Kecuali sampah yang ada di
+    dalam tong sampah.'
+  - ...Apa?! Kamu mau pergi mengejar dia?!
+  - '...Aku mengerti. Kamu berhati-hatilah.
+
+    Kamu bisa mengalahkan monster-monster
+    itu dengan menginjak mereka.
+
+    Berjuanglah, Wira!'
