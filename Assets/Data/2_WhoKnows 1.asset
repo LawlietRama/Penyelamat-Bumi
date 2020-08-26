@@ -17,11 +17,14 @@ MonoBehaviour:
 
     Aku barusan melihat seseorang menaiki robot dan
     terbang!'
-  - 'D-Dan semua sampah berubah menjadi monster!
+  - 'D-Dan semua sampah selain yang ada di tong sampah berubah menjadi monster!
 
-    Kecuali sampah yang ada di
-    dalam tong sampah.'
-  - ...Apa?! Kamu mau pergi mengejar dia?!
+    Kamu
+    tahu sesuatu tentang ini?'
+  - '...Apa?!<pause=1> Jadi begitu...
+
+    Lalu, kamu mau mengejar orang yang menaiki
+    robot itu?'
   - '...Aku mengerti. Kamu berhati-hatilah.
 
     Kamu bisa mengalahkan monster-monster
