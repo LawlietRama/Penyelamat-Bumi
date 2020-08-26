@@ -18,7 +18,11 @@ public class GameManager : MonoBehaviour
 
     public int currentTrashes;
     public int currentStars;
+    public int totalStars;
     public int currentDeaths;
+
+    [Header("Ketika melanggar lalu lintas")]
+    public int currentViolateTraffic;
 
     private void Awake()
     {
@@ -83,6 +87,11 @@ public class GameManager : MonoBehaviour
         UIManager.instance.trashText.text = "" + currentTrashes;
     }
 
+    public void AddViolate()
+    {
+        currentViolateTraffic += 1;
+    }
+
     public void PauseUnpause()
     {
         if(UIManager.instance.pauseScreen.activeInHierarchy)
@@ -139,7 +148,7 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
 
-        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_trashes"))
+        /*if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_trashes"))
         {
             if(currentTrashes > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_trashes"))
             {
@@ -149,6 +158,29 @@ public class GameManager : MonoBehaviour
         else
         {
             PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_trashes", currentTrashes);
+        }*/
+
+        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_stars"))
+        {
+            if (currentStars > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_stars"))
+            {
+                Debug.Log("TOTAL STAR SEBELUM" + totalStars);
+                Debug.Log("Star sebelum" + PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_stars"));
+                totalStars += currentStars - PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_stars");
+                //totalStars -= PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_stars");
+                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_stars", currentStars);
+                PlayerPrefs.SetInt("TotalStars", totalStars);
+                Debug.Log("Star sekarang" + currentStars);
+                Debug.Log("TOTAL STAR SEKARANG" + totalStars);
+
+            }
+            
+        }
+        else
+        {
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_stars", currentStars);
+            totalStars += currentStars;
+            PlayerPrefs.SetInt("TotalStars", totalStars);
         }
 
         SceneManager.LoadScene(levelToLoad);
