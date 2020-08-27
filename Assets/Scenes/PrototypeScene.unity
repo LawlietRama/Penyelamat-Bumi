@@ -161,7 +161,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh476770
+  m_Name: pb_Mesh-40260
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -829,7 +829,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh476758
+  m_Name: pb_Mesh-40280
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2520,7 +2520,7 @@ MonoBehaviour:
     FieldOfView: 40
     OrthographicSize: 10
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 300
     Dutch: 0
     LensShift: {x: 0, y: 0}
   m_Transitions:
@@ -15105,7 +15105,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh474988
+  m_Name: pb_Mesh-40274
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17466,7 +17466,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh475276
+  m_Name: pb_Mesh-40266
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22797,7 +22797,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4654
+  m_Name: pb_Mesh92236
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23146,7 +23146,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh474532
+  m_Name: pb_Mesh-40186
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24346,7 +24346,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh476544
+  m_Name: pb_Mesh-40248
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24510,7 +24510,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh474460
+  m_Name: pb_Mesh-40264
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24674,7 +24674,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh475790
+  m_Name: pb_Mesh-40258
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26425,7 +26425,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4696
+  m_Name: pb_Mesh92166
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27342,7 +27342,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh477044
+  m_Name: pb_Mesh-40188
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28059,7 +28059,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh475856
+  m_Name: pb_Mesh-40190
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29815,17 +29815,17 @@ PrefabInstance:
     - target: {fileID: 6296175334952859763, guid: dcfd55802ad4d354d827319e81f0b500,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.75
+      value: 1.65
       objectReference: {fileID: 0}
     - target: {fileID: 6296175334952859763, guid: dcfd55802ad4d354d827319e81f0b500,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.75
+      value: 1.65
       objectReference: {fileID: 0}
     - target: {fileID: 6296175334952859763, guid: dcfd55802ad4d354d827319e81f0b500,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.75
+      value: 1.65
       objectReference: {fileID: 0}
     - target: {fileID: 6296175335181727758, guid: dcfd55802ad4d354d827319e81f0b500,
         type: 3}
@@ -36077,7 +36077,7 @@ MonoBehaviour:
     FieldOfView: 40
     OrthographicSize: 10
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 300
     Dutch: 0
     LensShift: {x: 0, y: 0}
   m_Transitions:
@@ -39999,7 +39999,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh475028
+  m_Name: pb_Mesh-40272
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -44597,7 +44597,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh476212
+  m_Name: pb_Mesh-40226
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46199,7 +46199,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4652
+  m_Name: pb_Mesh95086
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46393,7 +46393,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh475694
+  m_Name: pb_Mesh-40240
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46648,7 +46648,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh478262
+  m_Name: pb_Mesh-40262
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -62150,6 +62150,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.2799997
       objectReference: {fileID: 0}
+    - target: {fileID: 6842074439039845833, guid: dabe3e49a383b1e48b981426f69eefb4,
+        type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 6842074439039845834, guid: dabe3e49a383b1e48b981426f69eefb4,
         type: 3}
       propertyPath: m_IsActive
@@ -62210,6 +62215,11 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 178080862}
+    - target: {fileID: 6842074439464530985, guid: dabe3e49a383b1e48b981426f69eefb4,
+        type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 6842074439464530986, guid: dabe3e49a383b1e48b981426f69eefb4,
         type: 3}
       propertyPath: m_IsActive
@@ -62289,6 +62299,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OcclusionCulling
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842074440718348343, guid: dabe3e49a383b1e48b981426f69eefb4,
+        type: 3}
+      propertyPath: m_HDR
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842074440718348343, guid: dabe3e49a383b1e48b981426f69eefb4,
+        type: 3}
+      propertyPath: far clip plane
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6842074440718348344, guid: dabe3e49a383b1e48b981426f69eefb4,
         type: 3}
@@ -64027,6 +64047,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Shadows.m_NormalBias
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475205260061183144, guid: 8d10df1c7e03a984ebe7f8c0af8240d4,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7475205260061183145, guid: 8d10df1c7e03a984ebe7f8c0af8240d4,
         type: 3}
