@@ -13552,9 +13552,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c791dcaa9c94e4683cc2beb8e54be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 1
   deathSound: 6
   deathEffect: {fileID: 8156083915317197570, guid: 1242dba4ef9f9624ba66e84e6e54bc2e,
     type: 3}
-  itemToDrop: {fileID: 421270541484876930, guid: 644f98e04f0c4754cb46aa852ea3d500,
+  itemToDrop: {fileID: 6726340172827971660, guid: 33d34be98cc3318469d3d64cf7ee1c2f,
     type: 3}

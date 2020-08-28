@@ -36,7 +36,7 @@ public class EnemyHealthManager : MonoBehaviour
             
 
             Instantiate(deathEffect, transform.position, transform.rotation);
-            Instantiate(itemToDrop, transform.position, transform.rotation);
+            Instantiate(itemToDrop, transform.position + new Vector3(0,1,0), transform.rotation);
         }
     }
 }

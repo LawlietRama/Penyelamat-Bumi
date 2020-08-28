@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BounceTrampoline : MonoBehaviour
 {
-    public float bounceForceY = 8f;
+    public float bounceForceY = 15f;
     public float bounceForceX = 8f;
     public float bounceForceZ = 8f;
 
@@ -25,15 +25,16 @@ public class BounceTrampoline : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Player.instance.bounceMovement = new Vector3(bounceForceX, bounceForceY, bounceForceZ);
+            //Player.instance.bounceMovement = new Vector3(bounceForceX, bounceForceY, bounceForceZ);
+            Player.instance.BounceTrampoline(bounceForceY);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        /*if (other.tag == "Player")
         {
             Player.instance.bounceMovement = Vector3.zero;
-        }
+        }*/
     }
 }
