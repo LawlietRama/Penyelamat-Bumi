@@ -11026,6 +11026,7 @@ MonoBehaviour:
   bounceForceY: 8
   grounded: 0
   isJumping: 0
+  gravScale: 5
   jumpTimeCounter: 0
   jumpTime: 0.25
   holdJump: 0

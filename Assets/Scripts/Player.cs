@@ -58,6 +58,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     bool isJumping = false;
     float inAirTime = 0;
+    public float gravScale = 6f;
 
     public float jumpTimeCounter;
     public float jumpTime;
@@ -130,7 +131,7 @@ public class Player : MonoBehaviour
                 velocity.y = 0f;
             }
 
-            velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
+            velocity.y += Physics.gravity.y * gravScale* Time.deltaTime;
 
 
             mover.Move(velocity * Time.deltaTime);
@@ -151,10 +152,10 @@ public class Player : MonoBehaviour
                 velocity.y = 0f;
             }
 
-            velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
+            velocity.y += Physics.gravity.y * gravScale * Time.deltaTime;
 
 
-            mover.Move(velocity * Time.deltaTime);
+            //mover.Move(velocity * Time.deltaTime);
 
             if (bouncingCounter <= 0)
             {
@@ -282,8 +283,8 @@ public class Player : MonoBehaviour
             {
                 anim.SetFloat("inAirTime", inAirTime * Time.deltaTime);
             }
-            //velocity.y += Physics.gravity.y * 5f * Time.deltaTime; original
-            velocity.y -= grav * Time.deltaTime;
+            velocity.y += Physics.gravity.y * gravScale * Time.deltaTime; //original
+            //velocity.y -= grav * Time.deltaTime;
         }
         //velocity.y = Mathf.Clamp(velocity.y, -9.8f, 9.8f); //original
 
@@ -330,7 +331,7 @@ public class Player : MonoBehaviour
         }
            // Debug.Log(velocity.y);
         
-       velocity.y += Physics.gravity.y * 5f * Time.deltaTime;
+       velocity.y += Physics.gravity.y * gravScale * Time.deltaTime;
     }
 
     private void LateUpdate()
@@ -369,5 +370,14 @@ public class Player : MonoBehaviour
         velocity.y = bouncingPower.y;
         //velocity.x = bounceForce;
         mover.Move(velocity * Time.deltaTime);
+    }
+
+    public void BounceTrampoline(float velocityY)
+    {
+        isBouncing = true;
+        bouncingCounter = bouncingLength;
+        velocity.y = velocityY;
+        //velocity.x = bounceForce;
+        mover.Move(velocity * Time.deltaTime / 2);
     }
 }
