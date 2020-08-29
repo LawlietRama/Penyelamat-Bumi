@@ -27,7 +27,11 @@ public class StarPickup : MonoBehaviour
     public bool violateTrafficLaw;
     public int maxViolate;
 
-    
+    [Space]
+    [Header("Syarat adalah sampah-sampah tertentu")]
+    public bool certainTrash;
+    public int maxCertainTrash;
+
 
 
     // Start is called before the first frame update
@@ -59,6 +63,15 @@ public class StarPickup : MonoBehaviour
         {
             starText.text = "" + GameManager.instance.currentViolateTraffic + "/" + maxViolate;
             if (GameManager.instance.currentViolateTraffic <= maxViolate && active.activeSelf == false)
+            {
+                inActive.SetActive(false);
+                active.SetActive(true);
+            }
+        }
+        else if(certainTrash == true)
+        {
+            starText.text = "" + GameManager.instance.currentCertainTrashes + "/" + maxCertainTrash;
+            if (GameManager.instance.currentCertainTrashes >= maxCertainTrash && active.activeSelf == false)
             {
                 inActive.SetActive(false);
                 active.SetActive(true);

@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3335533661047801623}
+  - component: {fileID: 588292136989365246}
+  - component: {fileID: 2911776476458878984}
   m_Layer: 0
   m_Name: Sampah Collectible
   m_TagString: Untagged
@@ -31,6 +33,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &588292136989365246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3335533661047801622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7212607f9207aaa4e8ccd939156ad55f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 4528070275428573503, guid: ce9fcab97c128ea46bb966d13c232fc0,
+    type: 3}
+  soundToPlay: 5
+  value: 1
+  isCertain: 0
+--- !u!65 &2911776476458878984
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3335533661047801622}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9132864, y: 2.968452, z: 1.9288025}
+  m_Center: {x: 0.034471996, y: 0.09123099, z: 0.039827}
 --- !u!1001 &3335533660938097816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92,16 +124,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2589268252090155895, guid: 33d34be98cc3318469d3d64cf7ee1c2f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 2589268252090155895, guid: 33d34be98cc3318469d3d64cf7ee1c2f,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5000001
       objectReference: {fileID: 0}
     - target: {fileID: 6726340172827971660, guid: 33d34be98cc3318469d3d64cf7ee1c2f,
         type: 3}

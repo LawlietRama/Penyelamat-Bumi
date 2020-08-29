@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 2589268252090155895}
   - component: {fileID: 808891591432731197}
   - component: {fileID: 4187354506549714601}
-  - component: {fileID: 6726340172827971662}
-  - component: {fileID: 6726340172827971661}
   - component: {fileID: 6726340172827971663}
   m_Layer: 0
   m_Name: Sampah
@@ -30,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6726340172827971660}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.5000001, y: 0.5, z: 0.5000001}
   m_Children:
   - {fileID: 1118466313724849722}
   m_Father: {fileID: 0}
@@ -85,35 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6726340172827971662
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6726340172827971660}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.9132864, y: 2.968452, z: 1.9288025}
-  m_Center: {x: 0.034471996, y: 0.09123099, z: 0.039827}
---- !u!114 &6726340172827971661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6726340172827971660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7212607f9207aaa4e8ccd939156ad55f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupEffect: {fileID: 4528070275428573503, guid: ce9fcab97c128ea46bb966d13c232fc0,
-    type: 3}
-  soundToPlay: 5
-  value: 1
 --- !u!95 &6726340172827971663
 Animator:
   serializedVersion: 3
