@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingEnemy : EnemyHealthManager
+public class ShootingEnemy : MonoBehaviour
 {
     public GameObject model;
     public float timeToRotate = 2f;
     public float rotationSpeed = 6f;
+
+    public bool isRotate = true;
 
     public GameObject bulletPrefab;
     public float timeToShoot = 1f;
@@ -27,14 +29,18 @@ public class ShootingEnemy : EnemyHealthManager
     void Update()
     {
         // Update the enemy's angle
-        rotationTimer -= Time.deltaTime;
-        if(rotationTimer <= 0f)
+        if(isRotate)
         {
-            rotationTimer = timeToRotate;
-            targetAngle += 90;
+            rotationTimer -= Time.deltaTime;
+            if (rotationTimer <= 0f)
+            {
+                rotationTimer = timeToRotate;
+                targetAngle += 90;
+            }
+            // Perform rotation
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, targetAngle, 0), Time.deltaTime * rotationSpeed);
         }
-        // Perform rotation
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, targetAngle, 0), Time.deltaTime * rotationSpeed);
+        
 
         //Shoot bullets
         shootingTimer -= Time.deltaTime;

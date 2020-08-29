@@ -8025,6 +8025,7 @@ GameObject:
   - component: {fileID: 6296175334952859763}
   - component: {fileID: 6296175334952859764}
   - component: {fileID: 6416115926901595842}
+  - component: {fileID: 8737892072695196}
   m_Layer: 0
   m_Name: BagMonster
   m_TagString: Untagged
@@ -8041,7 +8042,7 @@ Transform:
   m_GameObject: {fileID: 6296175334952859762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.76, y: 0.74, z: -8.16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.65, y: 1.65, z: 1.65}
   m_Children:
   - {fileID: 6296175334781171676}
   - {fileID: 6296175334929201538}
@@ -8082,8 +8083,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8138509, y: 2.4408593, z: 1.0945883}
-  m_Center: {x: 0.69160175, y: 0.72042966, z: 0.23477316}
+  m_Size: {x: 1.8138509, y: 1.7317524, z: 1.0945883}
+  m_Center: {x: 0.69160175, y: 0.3658762, z: 0.23477316}
+--- !u!65 &8737892072695196
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6296175334952859762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8138509, y: 0.6905174, z: 1.0945883}
+  m_Center: {x: 0.69160175, y: 1.5815086, z: 0.23477316}
 --- !u!1 &6296175335265139396
 GameObject:
   m_ObjectHideFlags: 0
@@ -8096,7 +8110,6 @@ GameObject:
   - component: {fileID: 6296175335265139400}
   - component: {fileID: 6296175335265139399}
   - component: {fileID: 6296175335265139398}
-  - component: {fileID: 6296175335265139397}
   m_Layer: 0
   m_Name: Arch
   m_TagString: Untagged
@@ -9462,20 +9475,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!64 &6296175335265139397
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6296175335265139396}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &6296175335279057791
 GameObject:
   m_ObjectHideFlags: 0
@@ -10413,7 +10412,6 @@ GameObject:
   - component: {fileID: 6296175335552182973}
   - component: {fileID: 6296175335552182972}
   - component: {fileID: 6296175335552182971}
-  - component: {fileID: 6296175335552182970}
   m_Layer: 0
   m_Name: Arch (1)
   m_TagString: Untagged
@@ -11779,20 +11777,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!64 &6296175335552182970
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6296175335552182969}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &6296175335584760187
 GameObject:
   m_ObjectHideFlags: 0

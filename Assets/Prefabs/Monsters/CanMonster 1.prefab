@@ -12422,7 +12422,7 @@ MonoBehaviour:
   deathSound: 6
   deathEffect: {fileID: 8156083915317197570, guid: 1242dba4ef9f9624ba66e84e6e54bc2e,
     type: 3}
-  itemToDrop: {fileID: 6726340172827971660, guid: 33d34be98cc3318469d3d64cf7ee1c2f,
+  itemToDrop: {fileID: 3335533661047801622, guid: 54a87aae5a572ca468eaee77fdab5ca0,
     type: 3}
 --- !u!1 &3546548735716865174
 GameObject:
