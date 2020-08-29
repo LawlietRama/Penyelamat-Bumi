@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public string levelToLoad;
 
     public int currentTrashes;
+    public int currentCertainTrashes;
     public int currentStars;
     public int totalStars;
     public int currentDeaths;
@@ -85,6 +86,11 @@ public class GameManager : MonoBehaviour
     {
         currentTrashes += trashesToAdd;
         UIManager.instance.trashText.text = "" + currentTrashes;
+    }
+
+    public void AddCertainTrashes(int trashesToAdd)
+    {
+        currentCertainTrashes += trashesToAdd;
     }
 
     public void AddViolate()
