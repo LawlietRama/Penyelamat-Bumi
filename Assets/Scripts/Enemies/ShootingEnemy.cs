@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingEnemy : EnemyHealthManager
+public class ShootingEnemy : MonoBehaviour
 {
     public GameObject model;
     public float timeToRotate = 2f;
