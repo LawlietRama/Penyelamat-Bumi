@@ -14,6 +14,8 @@ public class DoorController : MonoBehaviour
 
     public ButtonController theButton;
 
+    public bool openWhenPressed = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,13 +25,28 @@ public class DoorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(theButton.isPressed)
+        if(openWhenPressed)
         {
-            theDoor.rotation = Quaternion.Slerp(theDoor.rotation, openRot.rotation, openSpeed * Time.deltaTime);
+            if (theButton.isPressed)
+            {
+                theDoor.rotation = Quaternion.Slerp(theDoor.rotation, openRot.rotation, openSpeed * Time.deltaTime);
+            }
+            else
+            {
+                theDoor.rotation = Quaternion.Slerp(theDoor.rotation, startRot, openSpeed * Time.deltaTime);
+            }
         }
-        else
+        else if(!openWhenPressed)
         {
-            theDoor.rotation = Quaternion.Slerp(theDoor.rotation, startRot, openSpeed * Time.deltaTime);
+            if (theButton.isPressed)
+            {
+                theDoor.rotation = Quaternion.Slerp(theDoor.rotation, startRot, openSpeed * Time.deltaTime);
+            }
+            else
+            {
+                theDoor.rotation = Quaternion.Slerp(theDoor.rotation, openRot.rotation, openSpeed * Time.deltaTime);
+            }
         }
+
     }
 }

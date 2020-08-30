@@ -9,6 +9,7 @@ public class ShootingEnemy : MonoBehaviour
     public float rotationSpeed = 6f;
 
     public bool isRotate = true;
+    public bool isLookPlayer = false;
 
     public GameObject bulletPrefab;
     public float timeToShoot = 1f;
