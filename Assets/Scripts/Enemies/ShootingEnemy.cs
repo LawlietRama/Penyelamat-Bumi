@@ -19,6 +19,8 @@ public class ShootingEnemy : MonoBehaviour
     private float rotationTimer;
     private float shootingTimer;
 
+    public GameObject target;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +42,12 @@ public class ShootingEnemy : MonoBehaviour
             }
             // Perform rotation
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, targetAngle, 0), Time.deltaTime * rotationSpeed);
+        }
+        else if(isLookPlayer)
+        {
+            Vector3 direction = target.transform.position - transform.position;
+            Quaternion toRotation = Quaternion.FromToRotation(transform.forward, -direction);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, toRotation.y, 0), rotationSpeed * Time.deltaTime);
         }
         
 

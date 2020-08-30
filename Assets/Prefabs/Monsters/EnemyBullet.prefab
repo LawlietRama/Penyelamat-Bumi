@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d015a1b53abe34aa4c52ad9c3a055f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  lifetime: 1
+  speed: 12
+  lifetime: 1.3
 --- !u!135 &8319771124874496671
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -161,8 +161,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.29
+  m_Center: {x: 0, y: 0.6, z: 0}
 --- !u!54 &3150632079017115077
 Rigidbody:
   m_ObjectHideFlags: 0
