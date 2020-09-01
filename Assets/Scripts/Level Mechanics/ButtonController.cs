@@ -5,6 +5,7 @@ using UnityEngine;
 public class ButtonController : MonoBehaviour
 {
     public bool isPressed;
+    public bool isLeaveAreaOff = false;
     public Transform button, buttonDown;
     private Vector3 buttonUp;
 
@@ -43,6 +44,15 @@ public class ButtonController : MonoBehaviour
                 }
             }
             
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Player" && isLeaveAreaOff == true)
+        {
+            button.position = buttonUp;
+            isPressed = false;
         }
     }
 

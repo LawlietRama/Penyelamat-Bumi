@@ -372,11 +372,11 @@ public class Player : MonoBehaviour
         mover.Move(velocity * Time.deltaTime);
     }
 
-    public void BounceTrampoline(float velocityY)
+    public void BounceTrampoline(Vector3 velocityExtra)
     {
         isBouncing = true;
         bouncingCounter = bouncingLength;
-        velocity.y = velocityY;
+        velocity = velocityExtra;
         //velocity.x = bounceForce;
         mover.Move(velocity * Time.deltaTime / 2);
     }

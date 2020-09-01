@@ -26,7 +26,7 @@ public class BounceTrampoline : MonoBehaviour
         if (other.tag == "Player")
         {
             //Player.instance.bounceMovement = new Vector3(bounceForceX, bounceForceY, bounceForceZ);
-            Player.instance.BounceTrampoline(bounceForceY);
+            Player.instance.BounceTrampoline(new Vector3(bounceForceX, bounceForceY, bounceForceZ));
         }
     }
 

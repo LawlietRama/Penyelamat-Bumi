@@ -6,26 +6,48 @@ public class SwitchingObjects : MonoBehaviour
 {
     public GameObject theObject;
 
+    public bool isButtonGeneral = true;
+
     public ButtonController theButton;
+
+    public ButtonArea theButtonArea;
+
+    private Vector3 startPosition;
 
     public bool revealWhenPressed;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        startPosition = theObject.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(theButton.isPressed)
+        if(isButtonGeneral)
         {
-            theObject.SetActive(revealWhenPressed);
+            if (theButton.isPressed)
+            {
+                theObject.SetActive(revealWhenPressed);
+            }
+            else
+            {
+                theObject.SetActive(!revealWhenPressed);
+            }
         }
-        else
+        else // this is button area, where player must keep still so that the button ispressed
         {
-            theObject.SetActive(!revealWhenPressed);
+            if (theButtonArea.isPressed)
+            {
+                theObject.transform.position = startPosition;
+                theObject.SetActive(revealWhenPressed);
+            }
+            else
+            {
+                theObject.SetActive(!revealWhenPressed);
+            }
         }
+        
     }
 }
