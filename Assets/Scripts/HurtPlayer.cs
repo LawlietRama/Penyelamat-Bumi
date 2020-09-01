@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HurtPlayer : MonoBehaviour
 {
-    public int soundToPlay;
+    public int soundToPlay = 6;
 
     // Start is called before the first frame update
     void Start()
