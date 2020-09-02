@@ -8,9 +8,11 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
+    //public ButtonManager pauseButton;
+
     private Vector3 respawnPosition;
 
-    public GameObject deathEffect;
+    public GameObject deathEffect, pauseButtonObject;
 
     public int levelEndMusic = 8;
 
@@ -44,7 +46,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Cancel"))
+        if(Input.GetButtonDown("Cancel"))       //input.getbuttondowncancel
         {
             PauseUnpause();
         }
@@ -108,20 +110,22 @@ public class GameManager : MonoBehaviour
         {
             UIManager.instance.pauseScreen.SetActive(false);
             UIManager.instance.floatingJoystick.SetActive(true);
+            //pauseButtonObject.SetActive(true);
             Time.timeScale = 1f;
 
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.visible = false;
+            //Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
             UIManager.instance.pauseScreen.SetActive(true);
             UIManager.instance.floatingJoystick.SetActive(false);
+            //pauseButtonObject.SetActive(false);
             UIManager.instance.CloseOptions();
             Time.timeScale = 0f;
 
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
         }
     }
 

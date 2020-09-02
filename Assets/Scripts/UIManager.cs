@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     public float fadeSpeed = 2f;
     public bool fadeToBlack, fadeFromBlack;
 
-    public GameObject pauseScreen, optionsScreen, trashBinScreen, floatingJoystick, jumpButton, interactButton;
+    public GameObject pauseScreen, optionsScreen, trashBinScreen, floatingJoystick, jumpButton, interactButton, pauseButton;
 
     public Text trashText;
     public Text starText;
