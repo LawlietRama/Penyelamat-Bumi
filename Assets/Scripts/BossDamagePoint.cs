@@ -20,6 +20,7 @@ public class BossDamagePoint : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            Player.instance.Bounce();
             BossController.instance.DamageBoss();
         }
     }

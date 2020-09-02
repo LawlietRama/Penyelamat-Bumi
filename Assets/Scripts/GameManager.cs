@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     public string levelToLoad;
 
+    public bool isRespawning;
+
     public int currentTrashes;
     public int currentCertainTrashes;
     public int currentStars;
@@ -64,6 +66,8 @@ public class GameManager : MonoBehaviour
         Instantiate(deathEffect, Player.instance.transform.position + new Vector3 (0,2,0), Player.instance.transform.rotation);
 
         yield return new WaitForSeconds(2f);
+
+        isRespawning = true;
 
         HealthManager.instance.ResetHealth();
 
