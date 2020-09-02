@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
     // Gravity
     float grav = 9.81f;
     [SerializeField]
-    bool grounded = false;
+    public bool grounded = false;
     [SerializeField]
     bool isJumping = false;
     float inAirTime = 0;

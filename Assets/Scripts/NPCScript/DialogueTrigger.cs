@@ -49,7 +49,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("NPC"))
+        if (other.CompareTag("NPC") && Player.instance.grounded == true)
         {
             jump.SetActive(false);
             interact.SetActive(true);
