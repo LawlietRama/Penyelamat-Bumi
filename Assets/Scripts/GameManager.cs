@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     private Vector3 respawnPosition;
 
-    public GameObject deathEffect, pauseButtonObject;
+    public GameObject deathEffect;
 
     public int levelEndMusic = 8;
 
@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
 
     public void Respawn()
     {
+        currentDeaths += 1;
         StartCoroutine(RespawnCo());
     }
 
@@ -157,7 +158,7 @@ public class GameManager : MonoBehaviour
         Player.instance.stopMove = true;
         UIManager.instance.fadeToBlack = true;
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         Debug.Log("Level Ended");
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
@@ -195,6 +196,20 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_stars", currentStars);
             totalStars += currentStars;
             PlayerPrefs.SetInt("TotalStars", totalStars);
+        }
+
+        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_deaths"))
+        {
+            if (currentDeaths < PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_deaths"))
+            {
+                //totalStars -= PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_stars");
+                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_deaths", currentDeaths);
+            }
+
+        }
+        else
+        {
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_deaths", currentDeaths);
         }
 
         SceneManager.LoadScene(levelToLoad);

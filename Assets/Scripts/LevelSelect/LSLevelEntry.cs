@@ -62,6 +62,14 @@ public class LSLevelEntry : MonoBehaviour
             {
                 LSUIManager.instance.trashText.text = "???";
             }
+            if (PlayerPrefs.HasKey(levelName + "_deaths"))
+            {
+                LSUIManager.instance.deathText.text = PlayerPrefs.GetInt(levelName + "_deaths").ToString();
+            }
+            else
+            {
+                LSUIManager.instance.deathText.text = "???";
+            }
         }
     }
 
