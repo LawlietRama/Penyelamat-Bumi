@@ -11,6 +11,7 @@ public class LSUIManager : MonoBehaviour
     public GameObject lNamePanel;
 
     public Text trashText;
+    public Text deathText;
 
     private void Awake()
     {
