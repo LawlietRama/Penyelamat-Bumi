@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     public int totalStars;
     public int currentDeaths;
 
+    public bool wasInteractActive = false;
+
     [Header("Ketika melanggar lalu lintas")]
     public int currentViolateTraffic;
 
@@ -111,6 +113,16 @@ public class GameManager : MonoBehaviour
         {
             UIManager.instance.pauseScreen.SetActive(false);
             UIManager.instance.floatingJoystick.SetActive(true);
+            if(UIManager.instance.jumpButton.activeSelf)
+            {
+                wasInteractActive = false;
+                UIManager.instance.jumpButton.SetActive(false);
+            }
+            else if(UIManager.instance.interactButton.activeSelf)
+            {
+                wasInteractActive = true;
+                UIManager.instance.interactButton.SetActive(false);
+            }
             //pauseButtonObject.SetActive(true);
             Time.timeScale = 1f;
 
@@ -121,6 +133,14 @@ public class GameManager : MonoBehaviour
         {
             UIManager.instance.pauseScreen.SetActive(true);
             UIManager.instance.floatingJoystick.SetActive(false);
+            if(wasInteractActive == false)
+            {
+                UIManager.instance.jumpButton.SetActive(true);
+            }
+            else if(wasInteractActive)
+            {
+                UIManager.instance.interactButton.SetActive(true);
+            }
             //pauseButtonObject.SetActive(false);
             UIManager.instance.CloseOptions();
             Time.timeScale = 0f;
@@ -158,8 +178,13 @@ public class GameManager : MonoBehaviour
         Player.instance.stopMove = true;
         UIManager.instance.fadeToBlack = true;
 
-        yield return new WaitForSeconds(5f);
-        Debug.Log("Level Ended");
+        yield return new WaitForSeconds(2f);
+
+        
+        UIManager.instance.levelEndScreen.SetActive(true);
+        UIManager.instance.levelEndTrash.text = "" + currentTrashes;
+        UIManager.instance.levelEndStar.text = "" + currentStars;
+        UIManager.instance.levelEndDeath.text = "" + currentDeaths;
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
 
@@ -189,7 +214,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("TOTAL STAR SEKARANG" + totalStars);
 
             }
-            
+
         }
         else
         {
@@ -200,7 +225,7 @@ public class GameManager : MonoBehaviour
 
         if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_deaths"))
         {
-            if (currentDeaths < PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_deaths"))
+            if (currentDeaths > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_deaths"))
             {
                 //totalStars -= PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_stars");
                 PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_deaths", currentDeaths);
@@ -212,8 +237,11 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_deaths", currentDeaths);
         }
 
-        SceneManager.LoadScene(levelToLoad);
+    }
 
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(levelToLoad);
     }
 
 }

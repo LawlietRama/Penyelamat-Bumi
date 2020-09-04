@@ -780,6 +780,7 @@ MonoBehaviour:
   currentStars: 0
   totalStars: 0
   currentDeaths: 0
+  wasInteractActive: 0
   currentViolateTraffic: 0
 --- !u!114 &1353831459857526067
 MonoBehaviour:

@@ -13,10 +13,12 @@ public class UIManager : MonoBehaviour
     public float fadeSpeed = 2f;
     public bool fadeToBlack, fadeFromBlack;
 
-    public GameObject pauseScreen, optionsScreen, trashBinScreen, floatingJoystick, jumpButton, interactButton, pauseButton;
+    public GameObject blackScreenObject, pauseScreen, optionsScreen, trashBinScreen, floatingJoystick, jumpButton, interactButton, pauseButton, levelEndScreen;
 
     public Text trashText;
     public Text starText;
+
+    public Text levelEndTrash, levelEndStar, levelEndDeath;
 
     public Slider musicVolSlider, sfxVolSlider;
 
@@ -44,6 +46,7 @@ public class UIManager : MonoBehaviour
     {
         if(fadeToBlack)
         {
+            blackScreenObject.SetActive(true);
             blackScreen.color = new Color(blackScreen.color.r, blackScreen.color.g, blackScreen.color.b, Mathf.MoveTowards(blackScreen.color.a, 1f, fadeSpeed * Time.deltaTime));
 
             if (blackScreen.color.a == 1f)
@@ -59,6 +62,7 @@ public class UIManager : MonoBehaviour
             if (blackScreen.color.a == 0f)             
             {
                 fadeFromBlack = false;
+                blackScreenObject.SetActive(false);
             }
         }
     }
