@@ -113,15 +113,14 @@ public class GameManager : MonoBehaviour
         {
             UIManager.instance.pauseScreen.SetActive(false);
             UIManager.instance.floatingJoystick.SetActive(true);
-            if(UIManager.instance.jumpButton.activeSelf)
+            
+            if (wasInteractActive == false)
             {
-                wasInteractActive = false;
-                UIManager.instance.jumpButton.SetActive(false);
+                UIManager.instance.jumpButton.SetActive(true);
             }
-            else if(UIManager.instance.interactButton.activeSelf)
+            else if (wasInteractActive)
             {
-                wasInteractActive = true;
-                UIManager.instance.interactButton.SetActive(false);
+                UIManager.instance.interactButton.SetActive(true);
             }
             //pauseButtonObject.SetActive(true);
             Time.timeScale = 1f;
@@ -133,13 +132,15 @@ public class GameManager : MonoBehaviour
         {
             UIManager.instance.pauseScreen.SetActive(true);
             UIManager.instance.floatingJoystick.SetActive(false);
-            if(wasInteractActive == false)
+            if (UIManager.instance.jumpButton.activeSelf)
             {
-                UIManager.instance.jumpButton.SetActive(true);
+                wasInteractActive = false;
+                UIManager.instance.jumpButton.SetActive(false);
             }
-            else if(wasInteractActive)
+            else if (UIManager.instance.interactButton.activeSelf)
             {
-                UIManager.instance.interactButton.SetActive(true);
+                wasInteractActive = true;
+                UIManager.instance.interactButton.SetActive(false);
             }
             //pauseButtonObject.SetActive(false);
             UIManager.instance.CloseOptions();
