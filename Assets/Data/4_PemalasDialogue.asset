@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: 4_PemalasDialogue
   m_EditorClassIdentifier: 
   conversationBlock:
-  - Wira, kalau kamu membersihkan semua sampah yang ada disini kamu akan kuberikan
-    lencana bintang ini!
+  - 'Siapa orang-orang bodoh yang membuang sampah ke pinggir sungai?!
+
+    Apa mereka
+    tidak sadar salah satu faktor penyebab mengapa desa kita sering banjir adalah
+    karena ini?!'
+  - Dan tak hanya itu, sekarang seorang pria yang menaiki robot mengubah sampah yang
+    mereka buang sembarangan menjadi monster!
+  - Wira! Kalau kamu membersihkan seluruh sampah yang ada di sini akan kuberikan
+    bintang ini sebagai hadiah.
   - 'K-Kenapa bukan aku saja yang bersihkan?
 
-    A-Aku ada urusan lain setelah ini,
-    jadi aku tidak boleh kotor membersihkan sampah.<pause=1>
-
-    Hahaha!'
-  - P-Pokoknya bersihkanlah semua sampah disini!
+    S-Setelah ini aku ada acara, jadi
+    pakaianku tidak boleh kotor ah-haha (aslinya malas).'

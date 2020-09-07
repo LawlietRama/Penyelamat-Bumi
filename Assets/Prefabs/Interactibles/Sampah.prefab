@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 808891591432731197}
   - component: {fileID: 4187354506549714601}
   - component: {fileID: 6726340172827971663}
+  - component: {fileID: 1772798644875540862}
+  - component: {fileID: 3009200014716488705}
   m_Layer: 0
   m_Name: Sampah
   m_TagString: Untagged
@@ -102,6 +104,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1772798644875540862
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6726340172827971660}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.1629276, y: 3.695887, z: 3.2822783}
+  m_Center: {x: 0.034513943, y: 0.45494866, z: 0.033245318}
+--- !u!114 &3009200014716488705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6726340172827971660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7212607f9207aaa4e8ccd939156ad55f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 4528070275428573503, guid: ce9fcab97c128ea46bb966d13c232fc0,
+    type: 3}
+  soundToPlay: 5
+  value: 1
+  isCertain: 0
 --- !u!1001 &1686264868022528407
 PrefabInstance:
   m_ObjectHideFlags: 0

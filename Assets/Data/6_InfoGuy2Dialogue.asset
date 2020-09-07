@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: 6_InfoGuy2Dialogue
   m_EditorClassIdentifier: 
   conversationBlock:
-  - 
-  - 
+  - Wira, kamu mau menuruni gunung dan pergi dari desa? Kenapa?
+  - ...Jadi begitu. Kalau kamu mau menuruni gunung ini dengan selamat, kamu harus
+    selalu berada dalam kotak putih!
+  - Ingat itu baik-baik!
