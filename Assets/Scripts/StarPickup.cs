@@ -46,6 +46,14 @@ public class StarPickup : MonoBehaviour
             //starText.transform.position = new Vector3(0, 0, 0);
             starText.text = "";
         }
+        else if (violateTrafficLaw)
+        {
+            inActive.SetActive(false);
+            active.SetActive(true);
+            image.SetActive(false);
+            starText.transform.position = new Vector3(0, 0, 0);
+            starText.text = "!";
+        }
     }
 
     // Update is called once per frame
@@ -62,7 +70,6 @@ public class StarPickup : MonoBehaviour
         }
         else if (violateTrafficLaw == true)
         {
-            starText.text = "Tidak melanggar lampu lalu lintas!";
             if (doViolate.isPressed == true)
             {
                 active.SetActive(false);
