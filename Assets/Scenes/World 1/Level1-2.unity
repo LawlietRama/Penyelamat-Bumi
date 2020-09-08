@@ -34010,6 +34010,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -3.94
       objectReference: {fileID: 0}
+    - target: {fileID: 1353831459857526065, guid: e06a7c8e095d17a47a47a8a2a85138ce,
+        type: 3}
+      propertyPath: levelEndMusic
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1353831460032060709, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34028,22 +34033,22 @@ PrefabInstance:
     - target: {fileID: 1353831460059000932, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0678041
+      value: -0.06780413
       objectReference: {fileID: 0}
     - target: {fileID: 1353831460059000932, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.010206234
+      value: -0.010206258
       objectReference: {fileID: 0}
     - target: {fileID: 1353831460059000932, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0077360235
+      value: 0.007736042
       objectReference: {fileID: 0}
     - target: {fileID: 1353831460059000932, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.99761647
+      value: -0.9976165
       objectReference: {fileID: 0}
     - target: {fileID: 1353831460059000932, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
@@ -34095,10 +34100,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -23.11
       objectReference: {fileID: 0}
+    - target: {fileID: 2298880002982199635, guid: e06a7c8e095d17a47a47a8a2a85138ce,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.28627378
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298880002982199635, guid: e06a7c8e095d17a47a47a8a2a85138ce,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9581479
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298880002982199635, guid: e06a7c8e095d17a47a47a8a2a85138ce,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2705135039189226365, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
       propertyPath: levelMusicToPlay
-      value: 15
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4120080284675379109, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
@@ -35130,7 +35150,7 @@ Transform:
   - {fileID: 1326247160}
   - {fileID: 745741562}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1024308328
 Mesh:
@@ -59154,7 +59174,7 @@ Transform:
   - {fileID: 1846820789}
   - {fileID: 1405238781}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1890385226
 PrefabInstance:
