@@ -13,8 +13,5 @@ MonoBehaviour:
   m_Name: 1_Abang_Dialogue
   m_EditorClassIdentifier: 
   conversationBlock:
-  - Aku meletakkan kotak ini disini agar monster itu tidak bisa masuk.
-  - 'Kamu bisa menghancurkan kotaknya dengan menginjaknya kalau kamu mau.<pause=1>
-
-    Tapi
-    tolong, lakukan sesuatu terhadap monster itu!'
+  - Semakin lama kamu menekan tombol lompat, maka semakin tinggi lompatanmu!
+  - Cobalah dengan menginjak kotak yang ada di depanku ini.
