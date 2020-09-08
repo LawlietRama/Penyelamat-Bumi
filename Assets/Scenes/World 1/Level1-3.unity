@@ -146,11 +146,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1353831459857526065, guid: e06a7c8e095d17a47a47a8a2a85138ce,
-        type: 3}
-      propertyPath: levelEndMusic
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 1353831460032060709, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -255,16 +250,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2705135039189226365, guid: e06a7c8e095d17a47a47a8a2a85138ce,
-        type: 3}
-      propertyPath: levelMusicToPlay
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5109381634180973929, guid: e06a7c8e095d17a47a47a8a2a85138ce,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -31.00003
       objectReference: {fileID: 0}
     - target: {fileID: 5978453641747367152, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
@@ -14252,7 +14237,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-93100
+  m_Name: pb_Mesh-194144
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37127,7 +37112,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-93140
+  m_Name: pb_Mesh-194184
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37865,7 +37850,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-93102
+  m_Name: pb_Mesh-194146
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
