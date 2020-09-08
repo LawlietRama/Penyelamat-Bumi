@@ -25,7 +25,8 @@ public class StarPickup : MonoBehaviour
     [Space]
     [Header("Syarat adalah tidak melanggar lalu lintas")]
     public bool violateTrafficLaw;
-    public int maxViolate;
+    //public int maxViolate;
+    public ButtonController doViolate;
 
     [Space]
     [Header("Syarat adalah sampah-sampah tertentu")]
@@ -45,6 +46,14 @@ public class StarPickup : MonoBehaviour
             //starText.transform.position = new Vector3(0, 0, 0);
             starText.text = "";
         }
+        else if (violateTrafficLaw)
+        {
+            inActive.SetActive(false);
+            active.SetActive(true);
+            image.SetActive(false);
+            starText.transform.position = new Vector3(0, 0, 0);
+            starText.text = "!";
+        }
     }
 
     // Update is called once per frame
@@ -61,11 +70,10 @@ public class StarPickup : MonoBehaviour
         }
         else if (violateTrafficLaw == true)
         {
-            starText.text = "" + GameManager.instance.currentViolateTraffic + "/" + maxViolate;
-            if (GameManager.instance.currentViolateTraffic <= maxViolate && active.activeSelf == false)
+            if (doViolate.isPressed == true)
             {
-                inActive.SetActive(false);
-                active.SetActive(true);
+                active.SetActive(false);
+                inActive.SetActive(true);
             }
         }
         else if(certainTrash == true)
