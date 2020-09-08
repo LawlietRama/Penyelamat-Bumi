@@ -2523,7 +2523,7 @@ PrefabInstance:
     - target: {fileID: 1411342161932689978, guid: cb678efed8965e44c995af6d8b0d15b0,
         type: 3}
       propertyPath: displayName
-      value: '1-3: Sampah Hidup'
+      value: '1-3: Menuruni Gunung'
       objectReference: {fileID: 0}
     - target: {fileID: 1411342161932689979, guid: cb678efed8965e44c995af6d8b0d15b0,
         type: 3}
@@ -2607,7 +2607,7 @@ PrefabInstance:
     - target: {fileID: 1411342161932689978, guid: cb678efed8965e44c995af6d8b0d15b0,
         type: 3}
       propertyPath: displayName
-      value: '1-4: Sampah Hidup'
+      value: '1-4: Menuju Kota'
       objectReference: {fileID: 0}
     - target: {fileID: 1411342161932689979, guid: cb678efed8965e44c995af6d8b0d15b0,
         type: 3}
@@ -3356,12 +3356,12 @@ PrefabInstance:
     - target: {fileID: 1411342161932689978, guid: cb678efed8965e44c995af6d8b0d15b0,
         type: 3}
       propertyPath: levelName
-      value: PrototypeScene
+      value: Opening2
       objectReference: {fileID: 0}
     - target: {fileID: 1411342161932689978, guid: cb678efed8965e44c995af6d8b0d15b0,
         type: 3}
       propertyPath: displayName
-      value: '0-1: Prototype'
+      value: '0-0: Pembukaan'
       objectReference: {fileID: 0}
     - target: {fileID: 1411342161932689979, guid: cb678efed8965e44c995af6d8b0d15b0,
         type: 3}
@@ -5253,7 +5253,7 @@ PrefabInstance:
     - target: {fileID: 1411342161932689978, guid: cb678efed8965e44c995af6d8b0d15b0,
         type: 3}
       propertyPath: displayName
-      value: '1-2: Test'
+      value: '1-2: Sampah di Sungai'
       objectReference: {fileID: 0}
     - target: {fileID: 1411342161932689978, guid: cb678efed8965e44c995af6d8b0d15b0,
         type: 3}
@@ -5697,12 +5697,12 @@ PrefabInstance:
     - target: {fileID: 6043104846402202688, guid: dabe3e49a383b1e48b981426f69eefb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.637993
+      value: 8.637995
       objectReference: {fileID: 0}
     - target: {fileID: 6043104846402202688, guid: dabe3e49a383b1e48b981426f69eefb4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.679445
+      value: 5.6794457
       objectReference: {fileID: 0}
     - target: {fileID: 6043104846402202688, guid: dabe3e49a383b1e48b981426f69eefb4,
         type: 3}
