@@ -1829,13 +1829,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688a6b5fb5975ea418354a5e5505581a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: PrototypeScene
+  firstLevel: Opening2
   levelSelect: LevelSelect
   continueButton: {fileID: 654603231}
   levelNames:
-  - Level1
-  - PrototypeScene
-  - PrototypeScene2
+  - Level1-1
+  - Level1-2
+  - Level1-3
+  - Level1-4
+  - Level2-1
+  - Level2-Boss
 --- !u!1 &877243826
 GameObject:
   m_ObjectHideFlags: 0
