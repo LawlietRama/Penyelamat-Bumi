@@ -5026,6 +5026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cpOn: {fileID: 4244018886063730069}
   cpOff: {fileID: 5315414858065968901}
+  soundToPlay: 4
 --- !u!135 &5315414859327269224
 SphereCollider:
   m_ObjectHideFlags: 0
