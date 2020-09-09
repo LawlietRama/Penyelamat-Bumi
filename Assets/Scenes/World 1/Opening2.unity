@@ -9331,12 +9331,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'LeftUpLeg'\n\tTransform 'LeftHandIndex1'\n\tTransform
-    'LeftArm'\n\tTransform 'RightArm'\n\tTransform 'RightHandThumb2'\n\tTransform
-    'LeftFoot'\n\tTransform 'Hips'\n\tTransform 'LeftHand'\n\tTransform 'UpperChest'\n\tTransform
-    'LeftHandIndex2'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -45285,12 +45280,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'LeftUpLeg'\n\tTransform 'LeftHandIndex1'\n\tTransform
-    'LeftArm'\n\tTransform 'RightArm'\n\tTransform 'RightHandThumb2'\n\tTransform
-    'LeftFoot'\n\tTransform 'Hips'\n\tTransform 'LeftHandThumb2_end'\n\tTransform
-    'RightHandThumb2_end'\n\tTransform 'LeftHand'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -46242,12 +46232,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'LeftUpLeg'\n\tTransform 'LeftHandIndex1'\n\tTransform
-    'LeftArm'\n\tTransform 'RightArm'\n\tTransform 'RightHandThumb2'\n\tTransform
-    'LeftFoot'\n\tTransform 'Hips'\n\tTransform 'LeftHand'\n\tTransform 'UpperChest'\n\tTransform
-    'LeftHandIndex2'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -72160,12 +72145,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'LeftUpLeg'\n\tTransform 'LeftHandIndex1'\n\tTransform
-    'LeftArm'\n\tTransform 'RightArm'\n\tTransform 'RightHandThumb2'\n\tTransform
-    'LeftFoot'\n\tTransform 'Hips'\n\tTransform 'LeftHand'\n\tTransform 'UpperChest'\n\tTransform
-    'LeftHandIndex2'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -105741,7 +105721,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5634280043877652073}
-  m_LocalRotation: {x: 0, y: 0.46871963, z: 0.008590688, w: 0}
+  m_LocalRotation: {x: 0, y: 0.9998321, z: 0.018324912, w: 0}
   m_LocalPosition: {x: -21.2, y: 3.2, z: 15.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -111916,7 +111896,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 84803ffd02c566344a1de6a702a2deb9, type: 2}
+  - {fileID: 2100000, guid: 85aa7a7203226c04fbd706db9ad04c20, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -117694,12 +117674,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'LeftUpLeg'\n\tTransform 'LeftHandIndex1'\n\tTransform
-    'LeftArm'\n\tTransform 'RightArm'\n\tTransform 'RightHandThumb2'\n\tTransform
-    'LeftFoot'\n\tTransform 'Hips'\n\tTransform 'LeftHand'\n\tTransform 'UpperChest'\n\tTransform
-    'LeftHandIndex2'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
