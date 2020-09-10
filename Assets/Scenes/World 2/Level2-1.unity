@@ -2475,7 +2475,7 @@ PrefabInstance:
     - target: {fileID: 2002342622235172533, guid: e8c666d73ff75ab4f94564ae39e8569a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2002342622235172533, guid: e8c666d73ff75ab4f94564ae39e8569a,
         type: 3}
@@ -6409,7 +6409,7 @@ Transform:
   - {fileID: 1620996805}
   - {fileID: 221900599}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &233400368
 PrefabInstance:
@@ -6905,7 +6905,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-196038
+  m_Name: pb_Mesh-652418
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10649,7 +10649,7 @@ Transform:
   - {fileID: 487644487}
   - {fileID: 990143932}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &402878567
 Mesh:
@@ -14584,7 +14584,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-196076
+  m_Name: pb_Mesh-652456
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15759,7 +15759,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-196036
+  m_Name: pb_Mesh-652416
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18899,7 +18899,7 @@ PrefabInstance:
     - target: {fileID: 4571780365613566367, guid: 3e3f27298708f404f8c602b557109be0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4571780365613566367, guid: 3e3f27298708f404f8c602b557109be0,
         type: 3}
@@ -20554,6 +20554,11 @@ PrefabInstance:
     - target: {fileID: 8934121003376365043, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120371158187325426, guid: e06a7c8e095d17a47a47a8a2a85138ce,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
