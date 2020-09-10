@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public string firstLevel, levelSelect;
 
-    public GameObject continueButton;
+    public GameObject continueButton, howToPanel, creditPanel;
 
     public string[] levelNames;
 
@@ -59,5 +59,25 @@ public class MainMenu : MonoBehaviour
 
         }
         PlayerPrefs.SetInt("TotalStars", 0);
+    }
+
+    public void OpenHowTo()
+    {
+        howToPanel.SetActive(true);
+    }
+
+    public void CloseHowTo()
+    {
+        howToPanel.SetActive(false);
+    }
+
+    public void OpenCredit()
+    {
+        creditPanel.SetActive(true);
+    }
+
+    public void CloseCredit()
+    {
+        creditPanel.SetActive(false);
     }
 }

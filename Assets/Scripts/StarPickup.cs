@@ -8,6 +8,8 @@ public class StarPickup : MonoBehaviour
     public GameObject inActive;
     public GameObject active;
 
+    public int soundToPlay = 7;
+
     public GameObject effect;
 
     public Text starText;
@@ -91,6 +93,7 @@ public class StarPickup : MonoBehaviour
     {
         if(other.tag == "Player" && active.activeInHierarchy == true)
         {
+            AudioManager.instance.PlaySFX(soundToPlay);
             GameManager.instance.currentStars += 1;
             UIManager.instance.starText.text = "" + GameManager.instance.currentStars;
             Instantiate(effect, transform.position, transform.rotation);
