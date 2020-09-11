@@ -146,6 +146,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1353831459580261198, guid: e06a7c8e095d17a47a47a8a2a85138ce,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1353831459857526065, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
       propertyPath: levelEndMusic
@@ -276,6 +281,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -31
       objectReference: {fileID: 0}
+    - target: {fileID: 5109381635947410967, guid: e06a7c8e095d17a47a47a8a2a85138ce,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4fa32a8c4feb9944faf47b5efc752189,
+        type: 3}
     - target: {fileID: 5978453641747367152, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
       propertyPath: m_LocalPosition.x
