@@ -245,7 +245,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e263b893c7c90b4e99817fb966ac930, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4fa32a8c4feb9944faf47b5efc752189, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -519,6 +519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inActive: {fileID: 8747975079031439384}
   active: {fileID: 8747975078895985595}
+  soundToPlay: 7
   effect: {fileID: 247362415622219533, guid: 0ea576d0309b69e42a272116d9e40d93, type: 3}
   starText: {fileID: 8747975078445118113}
   image: {fileID: 8747975078950487788}
@@ -526,7 +527,7 @@ MonoBehaviour:
   trash: 1
   maxTrash: 2
   violateTrafficLaw: 0
-  maxViolate: 0
+  doViolate: {fileID: 0}
   certainTrash: 0
   maxCertainTrash: 0
 --- !u!1 &8747975079589266712
