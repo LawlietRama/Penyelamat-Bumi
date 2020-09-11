@@ -5173,7 +5173,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Gunakan tombol ini untuk lompat dan menginjak musuh.
+  m_Text: 'Gunakan tombol ini untuk lompat dan menginjak musuh.
+
+    Semakin lama
+    kamu tekan, maka semakin tinggi kamu
+
+    melompat.'
 --- !u!222 &1931429585
 CanvasRenderer:
   m_ObjectHideFlags: 0
