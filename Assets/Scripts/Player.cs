@@ -302,7 +302,7 @@ public class Player : MonoBehaviour
             isJumping = true;
             anim.SetTrigger("takeOff");
             jumpTimeCounter = jumpTime;
-            velocity.y = 15f;       //15f
+            velocity.y = 19f;       //15f
                                    //animasi lompat biasa
 
         }
@@ -313,7 +313,7 @@ public class Player : MonoBehaviour
                //animasi menghempaskan kaki di udara
             if (jumpTimeCounter>0)
             {
-                velocity.y = 15f;
+                velocity.y = 19f;
                 jumpTimeCounter -= Time.deltaTime;
             }
             else
