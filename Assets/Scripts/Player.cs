@@ -39,11 +39,11 @@ public class Player : MonoBehaviour
     Vector3 intent;
     Vector3 velocity;
     Vector3 velocityXZ;
-    public float speed = 10;
-    float accel = 20;
+    public float speed = 15;
+    public float accel = 10;
     float turnSpeed = 35;
-    float turnSpeedLow = 35;
-    float turnSpeedHigh = 45;
+    public float turnSpeedLow = 35;
+    public float turnSpeedHigh = 45;
     public float allowPlayerRotation = 0.1f;
 
     public Vector3 mExternalMovement = Vector3.zero;

@@ -4238,6 +4238,9 @@ MonoBehaviour:
   - {fileID: 4634674679818251772}
   enemyHurtBox: {fileID: 8454267489781488687}
   speed: 15
+  accel: 9
+  turnSpeedLow: 20
+  turnSpeedHigh: 25
   allowPlayerRotation: 0.1
   mExternalMovement: {x: 0, y: 0, z: 0}
   bounceMovement: {x: 0, y: 0, z: 0}

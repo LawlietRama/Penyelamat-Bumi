@@ -23589,22 +23589,22 @@ PrefabInstance:
     - target: {fileID: 1353831460059000932, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.039687272
+      value: 0.039687265
       objectReference: {fileID: 0}
     - target: {fileID: 1353831460059000932, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8137248
+      value: 0.81372476
       objectReference: {fileID: 0}
     - target: {fileID: 1353831460059000932, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.48175687
+      value: -0.48175684
       objectReference: {fileID: 0}
     - target: {fileID: 1353831460059000932, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.32278052
+      value: -0.32278058
       objectReference: {fileID: 0}
     - target: {fileID: 1353831460059000932, guid: e06a7c8e095d17a47a47a8a2a85138ce,
         type: 3}
@@ -64448,6 +64448,9 @@ MonoBehaviour:
   - {fileID: 6488869936472369345}
   enemyHurtBox: {fileID: 8002654363786598674}
   speed: 15
+  accel: 10
+  turnSpeedLow: 35
+  turnSpeedHigh: 45
   allowPlayerRotation: 0.1
   mExternalMovement: {x: 0, y: 0, z: 0}
   bounceMovement: {x: 0, y: 0, z: 0}
