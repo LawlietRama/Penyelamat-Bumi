@@ -9,6 +9,8 @@ public class EnemyHealthManager : MonoBehaviour
 
     public int deathSound;
 
+    public bool isCrateBoss = false;
+
     public GameObject deathEffect, itemToDrop;
 
     // Start is called before the first frame update
@@ -31,8 +33,14 @@ public class EnemyHealthManager : MonoBehaviour
         {
             AudioManager.instance.PlaySFX(deathSound);
 
-            Destroy(gameObject);
-
+            if(isCrateBoss)
+            {
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
             
 
             Instantiate(deathEffect, transform.position, transform.rotation);
