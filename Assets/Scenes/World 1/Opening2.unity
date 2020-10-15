@@ -9491,12 +9491,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'LeftUpLeg'\n\tTransform 'LeftHandIndex1'\n\tTransform
-    'LeftArm'\n\tTransform 'RightArm'\n\tTransform 'RightHandThumb2'\n\tTransform
-    'LeftFoot'\n\tTransform 'Hips'\n\tTransform 'LeftHand'\n\tTransform 'UpperChest'\n\tTransform
-    'LeftHandIndex2'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -17920,6 +17915,12 @@ Transform:
   m_Father: {fileID: 1682544337}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &704963486 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+    type: 3}
+  m_PrefabInstance: {fileID: 6229696285177254557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &709148724
 Mesh:
   m_ObjectHideFlags: 0
@@ -37084,6 +37085,7 @@ RectTransform:
   - {fileID: 407571550}
   - {fileID: 1500722011}
   - {fileID: 2128192312}
+  - {fileID: 704963486}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45699,12 +45701,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'LeftUpLeg'\n\tTransform 'LeftHandIndex1'\n\tTransform
-    'LeftArm'\n\tTransform 'RightArm'\n\tTransform 'RightHandThumb2'\n\tTransform
-    'LeftFoot'\n\tTransform 'Hips'\n\tTransform 'LeftHandThumb2_end'\n\tTransform
-    'RightHandThumb2_end'\n\tTransform 'LeftHand'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -46656,12 +46653,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'LeftUpLeg'\n\tTransform 'LeftHandIndex1'\n\tTransform
-    'LeftArm'\n\tTransform 'RightArm'\n\tTransform 'RightHandThumb2'\n\tTransform
-    'LeftFoot'\n\tTransform 'Hips'\n\tTransform 'LeftHand'\n\tTransform 'UpperChest'\n\tTransform
-    'LeftHandIndex2'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -72574,12 +72566,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'LeftUpLeg'\n\tTransform 'LeftHandIndex1'\n\tTransform
-    'LeftArm'\n\tTransform 'RightArm'\n\tTransform 'RightHandThumb2'\n\tTransform
-    'LeftFoot'\n\tTransform 'Hips'\n\tTransform 'LeftHand'\n\tTransform 'UpperChest'\n\tTransform
-    'LeftHandIndex2'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -106163,7 +106150,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5634280043877652073}
-  m_LocalRotation: {x: 0, y: 0.9998321, z: 0.018324912, w: 0.9120644}
+  m_LocalRotation: {x: 0, y: 0.9998321, z: 0.018324912, w: 0}
   m_LocalPosition: {x: -21.2, y: 3.2, z: 15.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -108169,6 +108156,130 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &6229696285177254557
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1412701611}
+    m_Modifications:
+    - target: {fileID: 6229696285613191424, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_Name
+      value: Skip Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191426, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 427757729}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -240
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -120
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229696285613191427, guid: 33e5534872ccb27469268e43f67ceb35,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33e5534872ccb27469268e43f67ceb35, type: 3}
 --- !u!1 &6258324523661668569
 GameObject:
   m_ObjectHideFlags: 0
@@ -118116,12 +118227,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'LeftUpLeg'\n\tTransform 'LeftHandIndex1'\n\tTransform
-    'LeftArm'\n\tTransform 'RightArm'\n\tTransform 'RightHandThumb2'\n\tTransform
-    'LeftFoot'\n\tTransform 'Hips'\n\tTransform 'LeftHand'\n\tTransform 'UpperChest'\n\tTransform
-    'LeftHandIndex2'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
